@@ -11,6 +11,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-cowsay -f tux.com "helo $USER"
+cowsay -f tux.com "hello $USER"
 cal
 date
