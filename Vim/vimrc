@@ -1,1 +1,23 @@
+set nocompatible
+filetype off
+
+"https://github.com/gmarik/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"this is required for Vundle
+Plugin 'gmarik/Vundle.vim'
+
+"https://github.com/Valloric/YouCompleteMe
+Plugin 'gmarik/YouCompleteMe'
+
+call vundle#end()
+filetype plugin indent on
+
+"FORMATING
 set number
+"set tabstop and turn into softabs
+set tabstop=4
+set expandtab
+"indentation shift amount
+set shiftwidth=4
