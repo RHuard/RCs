@@ -22,5 +22,8 @@ set expandtab
 "indentation shift amount
 set shiftwidth=4
 
-"colors
-colorscheme slate
+"COLORS
+
+"PREVIWE WINDOWS
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
