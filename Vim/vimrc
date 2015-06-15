@@ -21,3 +21,6 @@ set tabstop=4
 set expandtab
 "indentation shift amount
 set shiftwidth=4
+
+"colors
+colorscheme slate
