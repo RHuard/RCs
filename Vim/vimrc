@@ -24,6 +24,9 @@ set shiftwidth=4
 
 "COLORS
 
+"Searching for highlighted text
+vnoremap // y/<C-R>"<CR>
+
 "PREVIWE WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
