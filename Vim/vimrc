@@ -26,6 +26,8 @@ set shiftwidth=4
 
 "Searching for highlighted text
 vnoremap // y/<C-R>"<CR>
+"F2 in command mode now prints the file name
+map <F2> :echo @%<CR>
 
 "PREVIWE WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
