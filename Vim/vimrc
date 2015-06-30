@@ -14,15 +14,39 @@ Plugin 'gmarik/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
 
+set history=50 "50 lines of command line history
+set ruler      "show the cursor pistion all times
+set showcmd    "display incomplete commands
+set incsearch  "do incremental searching
+set showmatch  "show matching parens
+
 "FORMATING
 set number
+
 "set tabstop and turn into softabs
 set tabstop=4
 set expandtab
 "indentation shift amount
 set shiftwidth=4
 
+"wrap text after certain number of characters
+autocmd BufRead,BufNewFile * set textwidth=80
+
+"Turn off comment formatting options
+"c auto insert comment leader when wrapping bsed on textwidth
+"o insert comment leader when using o or O
+"r insert coment leader when hitting <Enter> in insert mode
+autocmd BufRead,BugNewFile * set formatoptions-=c formatoptions -=o formatoptions -=r
+
 "COLORS
+"Theme here:
+
+"highlight bad whitespace
+highlihgt BadWhitespace ctermbg=red guibg=red
+"makes tabs in beginning of line in Python bad whitespace
+autocmd BufRead,BufNewFile *.py match BadWhitespace /^\t+/
+"makes trailing whitespace in all lanugages bad
+autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
 
 "Searching for highlighted text
 vnoremap // y/<C-R>"<CR>
