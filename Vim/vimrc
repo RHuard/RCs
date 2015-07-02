@@ -52,6 +52,8 @@ autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
 vnoremap // y/<C-R>"<CR>
 "F2 in command mode now prints the file name
 map <F2> :echo @%<CR>
+"F3 runs pwd
+map <F3> :pwd<CR>
 
 "PREVIWE WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
