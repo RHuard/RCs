@@ -5,7 +5,7 @@ export ZSH=/home/ryan/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="fletcherm"
+ZSH_THEME="ryfletcherm"
 
 # Urncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -106,3 +106,12 @@ alias ..="cd .."
 cowsay -f tux.cow "hello $USER"
 cal
 date
+
+#customer highlighting for zsh syntax highlighting
+ZSH_HIGHLIGHT_STYLES[command]="fg=cyan"
+ZSH_HIGHLIGHT_STYLES[builtin]="fg=cyan"
+ZSH_HIGHLIGHT_STYLES[alias]="fg=cyan"
+ZSH_HIGHLIGHT_STYLES[precommand]="fg=cyan,bold"
+ZSH_HIGHLIGHT_STYLES[hashed-command]="fg=cyan"
+#enable syntax highlighting
+source ~/.oh-my-zsh/plugins/syntax/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
