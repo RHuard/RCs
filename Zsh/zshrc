@@ -50,7 +50,7 @@ setPromptUpdate(){
         else
                 UPDATEPROMPT="true"
         fi;
-
+}
 
 # # The following lines were added by compinstall
 # zstyle :compinstall filename '/home/ryan/.zshrc'
