@@ -127,5 +127,6 @@ ZSH_HIGHLIGHT_STYLES[builtin]="fg=cyan"
 ZSH_HIGHLIGHT_STYLES[alias]="fg=cyan"
 ZSH_HIGHLIGHT_STYLES[precommand]="fg=cyan,bold"
 ZSH_HIGHLIGHT_STYLES[hashed-command]="fg=cyan"
+ZSH_HIGHLIGHT_STYLES[function]="fg=cyan"
 #enable syntax highlighting
 source ~/.oh-my-zsh/plugins/syntax/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
