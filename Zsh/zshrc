@@ -34,9 +34,23 @@ bindkey -v
 
 #updating timestamp
 TMOUT=1
+UPDATEPROMPT="true"
 TRAPALRM(){
-  zle reset-prompt
+        if [ "$UPDATEPROMPT" = "true" ]; then
+                zle reset-prompt
+        fi;
 }
+
+#TODO:
+#should move into seperate "shell" functions directory
+setPromptUpdate(){
+
+        if [ "$UPDATEPROMPT" = "true" ]; then
+                UPDATEPROMPT="false"
+        else
+                UPDATEPROMPT="true"
+        fi;
+
 
 # # The following lines were added by compinstall
 # zstyle :compinstall filename '/home/ryan/.zshrc'
