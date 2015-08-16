@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ryan/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -121,6 +121,8 @@ cowsay -f tux.cow "hello $USER"
 cal
 date
 
+#enable syntax highlighting
+source ~/.oh-my-zsh/plugins/syntax/zsh-syntax-highlighting.zsh
 #customer highlighting for zsh syntax highlighting
 ZSH_HIGHLIGHT_STYLES[command]="fg=cyan"
 ZSH_HIGHLIGHT_STYLES[builtin]="fg=cyan"
@@ -128,5 +130,3 @@ ZSH_HIGHLIGHT_STYLES[alias]="fg=cyan"
 ZSH_HIGHLIGHT_STYLES[precommand]="fg=cyan,bold"
 ZSH_HIGHLIGHT_STYLES[hashed-command]="fg=cyan"
 ZSH_HIGHLIGHT_STYLES[function]="fg=cyan"
-#enable syntax highlighting
-source ~/.oh-my-zsh/plugins/syntax/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
