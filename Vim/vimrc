@@ -36,13 +36,13 @@ autocmd BufRead,BufNewFile * set textwidth=80
 "c auto insert comment leader when wrapping bsed on textwidth
 "o insert comment leader when using o or O
 "r insert coment leader when hitting <Enter> in insert mode
-autocmd BufRead,BugNewFile * set formatoptions-=c formatoptions -=o formatoptions -=r
+autocmd BufRead,BufNewFile * set formatoptions-=c formatoptions -=o formatoptions -=r
 
 "COLORS
 "Theme here:
 
 "highlight bad whitespace
-highlihgt BadWhitespace ctermbg=red guibg=red
+highlight BadWhitespace ctermbg=red guibg=red
 "makes tabs in beginning of line in Python bad whitespace
 autocmd BufRead,BufNewFile *.py match BadWhitespace /^\t+/
 "makes trailing whitespace in all lanugages bad
