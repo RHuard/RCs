@@ -3,7 +3,7 @@
 mkdir ~/.oh-my-zsh/plugins/syntax
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/syntax
 #use custom theme
-ln -s ~/Documents/RCs/Zsh/ryfletcharm.zsh-theme ~/.oh-my-zsh/themes/ryfletcherm.zsh-theme
+ln -s ~/Documents/RCs/Zsh/ryfletcherm.zsh-theme ~/.oh-my-zsh/themes/ryfletcherm.zsh-theme
 
 #Vim Plugins
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
