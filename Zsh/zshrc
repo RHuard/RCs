@@ -33,24 +33,24 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 #updating timestamp
-TMOUT=1
-UPDATEPROMPT="true"
-TRAPALRM(){
-        if [ "$UPDATEPROMPT" = "true" ]; then
-                zle reset-prompt
-        fi;
-}
+#TMOUT=1
+#UPDATEPROMPT="true"
+#TRAPALRM(){
+#        if [ "$UPDATEPROMPT" = "true" ]; then
+#                zle reset-prompt
+#        fi;
+#}
 
 #TODO:
 #should move into seperate "shell" functions directory
-setPromptUpdate(){
+#setPromptUpdate(){
 
-        if [ "$UPDATEPROMPT" = "true" ]; then
-                UPDATEPROMPT="false"
-        else
-                UPDATEPROMPT="true"
-        fi;
-}
+#        if [ "$UPDATEPROMPT" = "true" ]; then
+#                UPDATEPROMPT="false"
+#        else
+#                UPDATEPROMPT="true"
+#        fi;
+#}
 
 # # The following lines were added by compinstall
 # zstyle :compinstall filename '/home/ryan/.zshrc'
@@ -116,6 +116,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ..="cd .."
+alias qt5-designer="/usr/lib/x86_64-linux-gnu/qt5/bin/designer"
+
+#for homework in distributed:
+export NDDSHOME="/home/ryan/rti_connext_dds-5.2.0"
+alias rtiddsgen="/home/ryan/rti_connext_dds-5.2.0/bin/rtiddsgen"
 
 cowsay -f tux.cow "hello $USER"
 cal
