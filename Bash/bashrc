@@ -105,4 +105,4 @@ fi
 cowsay -f tux.cow "hello $USER"
 cal
 date
-source /opt/ros/jade/setup.bash
+#source /opt/ros/jade/setup.bash
