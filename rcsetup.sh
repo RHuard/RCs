@@ -17,11 +17,11 @@ rm -f ~/.pdbrc
 rm -f ~/.xinitrc
 
 #link in new ones
-ln -s $HOME/Documents/RCs/Bash/bashrc ~/.bashrc
-ln -s $HOME/Documents/RCs/Vim/vimrc ~/.vimrc
-ln -s $HOME/Documents/RCs/Zsh/zshrc ~/.zshrc
-ln -s $HOME/Documents/RCs/Pdb/pdbrc ~/.pdbrc
-ln -s $HOME/Documents/RCs/Xinit/xinitrc ~/.xinitrc
+ln -s $HOME/RCs/Bash/bashrc ~/.bashrc
+ln -s $HOME/RCs/Vim/vimrc ~/.vimrc
+ln -s $HOME/RCs/Zsh/zshrc ~/.zshrc
+ln -s $HOME/RCs/Pdb/pdbrc ~/.pdbrc
+ln -s $HOME/RCs/Xinit/xinitrc ~/.xinitrc
 
 #set up config files
 #terminator
