@@ -130,4 +130,4 @@ ZSH_HIGHLIGHT_STYLES[alias]="fg=cyan"
 ZSH_HIGHLIGHT_STYLES[precommand]="fg=cyan,bold"
 ZSH_HIGHLIGHT_STYLES[hashed-command]="fg=cyan"
 ZSH_HIGHLIGHT_STYLES[function]="fg=cyan"
-source /opt/ros/jade/setup.zsh
+#source /opt/ros/jade/setup.zsh
