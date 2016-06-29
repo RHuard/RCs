@@ -1,5 +1,5 @@
 set nocompatible
-filetype off
+filetype on
 
 "https://github.com/gmarik/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
