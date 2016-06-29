@@ -55,6 +55,8 @@ vnoremap // y/<C-R>"<CR>
 map <F2> :echo @%<CR>
 "F3 runs pwd
 map <F3> :pwd<CR>
+"F12 runs taglist
+nnoremap <silent> <F12> :TlistToggle<CR>
 
 "PREVIEW WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
