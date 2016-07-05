@@ -26,6 +26,9 @@ set expandtab
 "indentation shift amount
 set shiftwidth=4
 
+"keep highlighting on
+set hlsearch
+
 "wrap text after certain number of characters
 autocmd BufRead,BufNewFile * set textwidth=80
 
@@ -63,3 +66,4 @@ nnoremap <silent> <F12> :TlistToggle<CR>
 "PREVIEW WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
