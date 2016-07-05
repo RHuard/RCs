@@ -4,6 +4,7 @@
   go_down = <Alt>J
   go_right = <Alt>L
   go_up = <Alt>K
+  layout_launcher = <Super>L
 [profiles]
   [[default]]
     use_system_font = False
