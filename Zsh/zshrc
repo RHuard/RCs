@@ -135,4 +135,4 @@ ZSH_HIGHLIGHT_STYLES[function]="fg=cyan"
 #setup source-highlight with less
 #for less with syntax highlighting                                              
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"       
-export LESS=' -R 
+export LESS=' -R'
