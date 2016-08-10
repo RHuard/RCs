@@ -11,7 +11,7 @@
     font = Anonymous Pro 12
     background_image = None
     foreground_color = "#5db84a"
-    background_color = "#0d2521"
+    background_color = "#0d1b25"
 [layouts]
   [[default]]
     [[[child1]]]
