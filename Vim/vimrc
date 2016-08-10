@@ -41,7 +41,7 @@ autocmd BufRead,BufNewFile * set formatoptions-=c formatoptions -=o formatoption
 "COLORS
 "Theme here:
 set cc=80
-:hi ColorColumn ctermbg=Gray
+:hi ColorColumn ctermbg=DarkGray
 
 set cursorline
 
