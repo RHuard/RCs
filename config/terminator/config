@@ -4,12 +4,14 @@
   go_down = <Alt>J
   go_right = <Alt>L
   go_up = <Alt>K
-  layout_launcher = <Super>L
+  layout_launcher = <Super><Alt>L
 [profiles]
   [[default]]
     use_system_font = False
     font = Anonymous Pro 12
     background_image = None
+    foreground_color = "#5db84a"
+    background_color = "#262f30"
 [layouts]
   [[default]]
     [[[child1]]]
