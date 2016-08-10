@@ -10,7 +10,7 @@
     use_system_font = False
     font = Anonymous Pro 12
     background_image = None
-    foreground_color = "#5db84a"
+    foreground_color = "#3ea429"
     background_color = "#0d1b25"
 [layouts]
   [[default]]
