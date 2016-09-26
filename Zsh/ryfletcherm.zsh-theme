@@ -1,8 +1,8 @@
 #Slightly modified version of the fletcherm theme that comes with oh-my-zsh themes
 # Copied from old version of tonotdo's theme. LSCOLORS modified.
 PROMPT='%{$fg_bold[cyan]%}%n%{$fg_no_bold[magenta]%}[$HOST]%{$fg_bold[green]%}%3~$(git_prompt_info)
-%{$fg_bold[yellow]%}» %{$reset_color%}'                                            
-RPROMPT='%(?.%{$fgetgreen]%}.%{$fg[red]%})%?%{$fg[yellow]%}[%*]%{$reset_color%}'
+%{$fg_bold[yellow]%}» %{$reset_color%}'                                         
+RPROMPT='%(?.%{$fg[green]%}.%{$fg[red]%})%?%{$fg[yellow]%}[%*]%{$reset_color%}'
 
 # git theming
 CLEAN="~"
