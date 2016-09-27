@@ -1,18 +1,18 @@
 #Slightly modified version of the fletcherm theme that comes with oh-my-zsh themes
 # Copied from old version of tonotdo's theme. LSCOLORS modified.
 
-PROMPT_SYMBOL="↳"                                                               
+PROMPT_SYMBOL="↳"
 PROMPT='%{$fg_bold[cyan]%}%n%{$fg_no_bold[magenta]%}[$HOST]%{$fg_bold[green]%}%3~$(git_prompt_info)
-%{$fg_no_bold[yellow]%}%{$PROMPT_SYMBOL%} %{$reset_color%}'                     
-RPROMPT='%(?.%{$fg[green]%}.%{$fg[red]%})%?%{$fg[yellow]%}[%*]%{$reset_color%}'                                                                                                                                                                                                                                              
-                                                                                
-# git theming                                                                   
-CLEAN="✓"                                                                       
-CLEANCOLOR="$fg_bold[green]"                                                    
-DIRTY="!"                                                                       
-DIRTYCOLOR="$bg[magenta]$fg_bold[yellow]"                                       
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg_no_bold[red]%}"           
-ZSH_THEME_GIT_PROMPT_SUFFIX=""                                                  
+%{$fg_no_bold[yellow]%}%{$PROMPT_SYMBOL%} %{$reset_color%}'
+RPROMPT='%(?.%{$fg[green]%}.%{$fg[red]%})%?%{$fg[yellow]%}[%*]%{$reset_color%}' 
+
+# git theming
+CLEAN="✓"
+CLEANCOLOR="$fg_bold[green]"
+DIRTY="!"
+DIRTYCOLOR="$bg[magenta]$fg_bold[yellow]"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg_no_bold[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$CLEANCOLOR%}%{$CLEAN%}%{$reset_color%}%{$fg_bold[blue]%})"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$DIRTYCOLOR%}%{$DIRTY%}%{$reset_color%}%{$fg_bold[blue]%})"
 
