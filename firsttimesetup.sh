@@ -15,4 +15,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 #use custom theme
 ln -s ~/RCs/Zsh/ryfletcherm.zsh-theme ~/.oh-my-zsh/themes/ryfletcherm.zsh-theme
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 ~/RCs/rcsetup.sh
