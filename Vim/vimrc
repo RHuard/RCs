@@ -73,6 +73,3 @@ nnoremap <silent> <F12> :TlistToggle<CR>
 "PREVIEW WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
