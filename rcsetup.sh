@@ -27,3 +27,9 @@ ln -s $HOME/RCs/Pdb/pdbrc ~/.pdbrc
 make_dir $HOME/.config
 make_dir $HOME/.config/terminator
 ln -s ./config/terminator/config $HOME/.config/terminator/config
+
+#install vim plugins
+vim +PluginInstall +qall
+
+echo "Next Steps:"
+echo " *compile youcompleteme"
