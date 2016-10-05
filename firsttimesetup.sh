@@ -2,6 +2,7 @@
 
 #function to check it directory exists and if it
 #does not make it
+#TODO update to makdir -p
 function make_dir(){
     if [ ! -d $1 ]; then
         mkdir $1
