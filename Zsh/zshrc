@@ -117,8 +117,8 @@ source $ZSH/oh-my-zsh.sh
 alias ..="cd .."
 alias qt5-designer="/usr/lib/x86_64-linux-gnu/qt5/bin/designer"
 
-cowsay -f tux.cow "hello $USER"
 cal
+cowsay -f tux.cow "hello $USER"
 date
 
 #enable syntax highlighting
