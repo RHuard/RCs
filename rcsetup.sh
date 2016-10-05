@@ -21,12 +21,9 @@ ln -s $HOME/RCs/Bash/bashrc ~/.bashrc
 ln -s $HOME/RCs/Vim/vimrc ~/.vimrc
 ln -s $HOME/RCs/Zsh/zshrc ~/.zshrc
 ln -s $HOME/RCs/Pdb/pdbrc ~/.pdbrc
-ln -s $HOME/RCs/Xinit/xinitrc ~/.xinitrc
 
 #set up config files
 #terminator
 make_dir $HOME/.config
 make_dir $HOME/.config/terminator
 ln -s ./config/terminator/config $HOME/.config/terminator/config
-#xmodmap for xinitrc
-ln -s ./config/xmodmap/xmodmap $HOME/.xmodmap
