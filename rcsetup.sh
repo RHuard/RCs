@@ -22,7 +22,7 @@ ln -s $HOME/RCs/Vim/vimrc ~/.vimrc
 ln -s $HOME/RCs/Zsh/zshrc ~/.zshrc
 ln -s $HOME/RCs/Pdb/pdbrc ~/.pdbrc
 mkdir -p ~/.vim/colors
-ln -s $HOME/RCs/Vim/ryslate ~/.vim/colors/ryslate.vim
+ln -s $HOME/RCs/Vim/ryslate.vim ~/.vim/colors/ryslate.vim
 
 #set up config files
 #terminator
