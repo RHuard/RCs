@@ -43,6 +43,7 @@ autocmd BufRead,BufNewFile * set formatoptions-=c formatoptions -=o formatoption
 
 "COLORS
 syntax on
+color ryslate
 "Theme here:
 set cc=80
 :hi ColorColumn ctermbg=DarkGray
