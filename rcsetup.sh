@@ -33,5 +33,4 @@ ln -s ./config/terminator/config $HOME/.config/terminator/config
 #install vim plugins
 vim +PluginInstall +qall
 
-echo "Next Steps:"
-echo " *compile youcompleteme"
+echo "STILL NEED TODO: compile youcompleteme"
