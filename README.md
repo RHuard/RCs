@@ -29,3 +29,20 @@ Not a dependency for using these configs: but my newtartup repo (https://github.
 
 ### i3
 * None, however for the screen saver I use `i3lock -i $HOME/Pictures/Wallpapers/CurrentWallPaper.png -t` so you will want your desired screensaver to be a .png saved in that location
+
+## Install:
+````
+git clone https://github.com/rhuard/RCs.git $HOME/RCs
+$HOME/RCs/firsttimesetup.sh
+```
+## Reset RCs to What is in This Repo:
+```
+$HOME/RCs/rcsetup.sh
+```
+Note this will destroy any local changes you have made
+
+## Update RCs:
+### Personal Changes:
+just open up the given file in your favorite editor. eg: `vim ~/.vimrc`
+### Updates Made to This Repo:
+just `git pull` and all your rcs will be updated since they are all just symlinks to the repo
