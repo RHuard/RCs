@@ -97,6 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ..="cd .."
 alias ls="ls -X --color=auto"
+alias spellcheck="aspell --check"
 
 cal
 cowsay -f tux.cow "hello $USER"
