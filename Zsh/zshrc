@@ -32,25 +32,6 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-#updating timestamp
-TMOUT=1
-UPDATEPROMPT="false"
-TRAPALRM(){
-        if [ "$UPDATEPROMPT" = "true" ]; then
-                zle reset-prompt
-        fi;
-}
-
-#should move into seperate "shell" functions directory
-setPromptUpdate(){
-
-        if [ "$UPDATEPROMPT" = "true" ]; then
-                UPDATEPROMPT="false"
-        else
-                UPDATEPROMPT="true"
-        fi;
-}
-
 # # The following lines were added by compinstall
 # zstyle :compinstall filename '/home/ryan/.zshrc'
 #
