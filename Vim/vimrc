@@ -67,8 +67,8 @@ map <F3> :pwd<CR>
 map <F4> :echo expand('%:p')<CR>
 "F5 is nerd tree
 map <F5> :NERDTree<CR>
-"F12 runs taglist
-nnoremap <silent> <F12> :TlistToggle<CR>
+"F6 creates tag file
+map <F6> :! ctags -R -f tags .<CR>
 
 "PREVIEW WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
