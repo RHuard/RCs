@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 #set up rcs
 #delete old ones
