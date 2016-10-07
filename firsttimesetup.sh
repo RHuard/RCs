@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 #ZSH plugins
 #syntax highlighting
