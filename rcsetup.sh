@@ -1,34 +1,30 @@
 #! /bin/bash
 
-#function to check it directory exists and if it
-#does not make it
-function make_dir(){
-    if [ ! -d $1 ]; then
-        mkdir $1
-    fi
-}
-
 #set up rcs
 #delete old ones
-rm -f ~/.vimrc
-rm -f ~/.bashrc
-rm -f ~/.zshrc
-rm -f ~/.pdbrc
-rm -f ~/.xinitrc
+rm -f $HOME/.vimrc
+rm -f $HOME/.bashrc
+rm -f $HOME/.zshrc
+rm -f $HOME/.pdbrc
+rm -f $HOME/.xinitrc
+rm -f $HOME/.config/terminator/config
+rm -f $HOME/.config/i3/config
 
 #link in new ones
-ln -s $HOME/RCs/Bash/bashrc ~/.bashrc
-ln -s $HOME/RCs/Vim/vimrc ~/.vimrc
-ln -s $HOME/RCs/Zsh/zshrc ~/.zshrc
-ln -s $HOME/RCs/Pdb/pdbrc ~/.pdbrc
-mkdir -p ~/.vim/colors
-ln -s $HOME/RCs/Vim/ryslate.vim ~/.vim/colors/ryslate.vim
+ln -s $HOME/RCs/Bash/bashrc $HOME/.bashrc
+ln -s $HOME/RCs/Vim/vimrc $HOME/.vimrc
+ln -s $HOME/RCs/Zsh/zshrc $HOME/.zshrc
+ln -s $HOME/RCs/Pdb/pdbrc $HOME/.pdbrc
 
-#set up config files
-#terminator
-make_dir $HOME/.config
-make_dir $HOME/.config/terminator
-ln -s ./config/terminator/config $HOME/.config/terminator/config
+mkdir -p $HOME/.config
+mkdir -p $HOME/.config/terminator
+mkdir -p $HOME/.cinfig/i3
+
+ln -s $HOME/RCs/config/terminator/config $HOME/.config/terminator/config
+ln -s $HOME/RCs/config/i3/config $HOME/.config/i3/config
+
+mkdir -p ~/.vim/colors
+ln -s $HOME/RCs/Vim/ryslate.vim $HOME/.vim/colors/ryslate.vim
 
 #install vim plugins
 vim +PluginInstall +qall
