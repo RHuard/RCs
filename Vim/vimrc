@@ -21,7 +21,7 @@ set incsearch  "do incremental searching
 set showmatch  "show matching parens
 
 "FORMATING
-set number
+set relativenumber
 
 "set tabstop and turn into softabs
 set tabstop=4
