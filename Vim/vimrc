@@ -20,10 +20,23 @@ set showcmd    "display incomplete commands
 set incsearch  "do incremental searching
 set showmatch  "show matching parens
 
-"FORMATING
-set relativenumber
-set number
+"Line Numbers
+let num = 0                                                                        
+                                                                                   
+function! RelNumToggle()                                                           
+    if g:num                                                                       
+        let g:num = 0                                                              
+        set norelativenumber                                                       
+    else                                                                           
+        let g:num = 1                                                              
+        set relativenumber                                                         
+        set number                                                                                                                                             
+    endif                                                                          
+endfunction                                                                        
+                                                                                   
+call RelNumToggle() 
 
+"Formating
 "set tabstop and turn into softabs
 set tabstop=4
 set expandtab
@@ -61,23 +74,44 @@ autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
 "Searching for highlighted text
 vnoremap // y/<C-R>"<CR>
 
-"create both parens                                                                
-inoremap { {}<Esc>i                                                                
-inoremap ( ()<Esc>i                                                                                                                                            
-inoremap [ []<Esc>i                                                                
-inoremap ' ''<Esc>i                                                                
-inoremap " ""<Esc>i 
+let autoparens = 0                                                              
+"create both parens                                                             
+function! AutoParensToggle()                                                    
+    if g:autoparens                                                             
+        let g:autoparens = 0                                                    
+        inoremap { {                                                            
+        inoremap ( (                                                            
+        inoremap [ [                                                            
+        inoremap ' '                                                            
+        inoremap " "                                                            
+        inoremap < <                                                            
+    else                                                                        
+        let g:autoparens = 1                                                    
+        inoremap { {}<Esc>i                                                     
+        inoremap ( ()<Esc>i                                                     
+        inoremap [ []<Esc>i                                                     
+        inoremap ' ''<Esc>i                                                     
+        inoremap " ""<Esc>i                                                     
+        inoremap < <><Esc>i                                                     
+    endif                                                                       
+endfunction                                                                     
+                                                                                
+call AutoParensToggle()
 
-"F2 in command mode now prints the file name
-map <F2> :echo @%<CR>
-"F3 runs pwd
-map <F3> :pwd<CR>
-"F4 gets absolute path
-map <F4> :echo expand('%:p')<CR>
-"F5 is nerd tree
-map <F5> :NERDTree<CR>
-"F6 creates tag file
-map <F6> :! ctags -R -f tags .<CR>
+"F2 toggles line number (regular to relative)                                   
+map <F2> :call RelNumToggle()<CR>                                               
+"F3 in command mode now prints the file name                                    
+map <F3> :echo @%<CR>                                                           
+"F4 runs pwd                                                                    
+map <F4> :pwd<CR>                                                               
+"F5 gets absolute path                                                                                                                                         
+map <F5> :echo expand('%:p')<CR>                                                
+"F6 runs nerd tree                                                              
+map <F6> :NERDTree<CR>                                                          
+"F7 runs ctags                                                                  
+map <F7> :! ctags -R -f tags .<CR>                                              
+"F8 toggles AutoParens                                                          
+map <F8> :call AutoParensToggle()<CR>
 
 "PREVIEW WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
