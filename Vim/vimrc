@@ -22,6 +22,7 @@ set showmatch  "show matching parens
 
 "FORMATING
 set relativenumber
+set number
 
 "set tabstop and turn into softabs
 set tabstop=4
