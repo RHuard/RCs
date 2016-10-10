@@ -59,6 +59,14 @@ autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
 
 "Searching for highlighted text
 vnoremap // y/<C-R>"<CR>
+
+"create both parens                                                                
+inoremap { {}<Esc>i                                                                
+inoremap ( ()<Esc>i                                                                                                                                            
+inoremap [ []<Esc>i                                                                
+inoremap ' ''<Esc>i                                                                
+inoremap " ""<Esc>i 
+
 "F2 in command mode now prints the file name
 map <F2> :echo @%<CR>
 "F3 runs pwd
