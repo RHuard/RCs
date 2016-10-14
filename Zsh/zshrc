@@ -107,7 +107,8 @@ date
 
 #enable syntax highlighting
 source ~/.oh-my-zsh/plugins/syntax/zsh-syntax-highlighting.zsh
-#customer highlighting for zsh syntax highlighting
+#custom highlighting for zsh syntax highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 ZSH_HIGHLIGHT_STYLES[command]="fg=green"
 ZSH_HIGHLIGHT_STYLES[builtin]="fg=green"
 ZSH_HIGHLIGHT_STYLES[alias]="fg=green"
