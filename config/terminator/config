@@ -12,6 +12,8 @@
     background_image = None
     foreground_color = "#888888"
     background_color = "#0d1b25"
+    cursor_blink=False
+    cursor_color = "#4f4f4f"
 [layouts]
   [[default]]
     [[[child1]]]
