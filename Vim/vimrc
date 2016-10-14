@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 Plugin 'Valloric/YouCompleteMe' "https://github.com/Valloric/YouCompleteMe
 Plugin 'scrooloose/nerdtree' "https://github.com/scrooloose/nerdtree
 Plugin 'terryma/vim-multiple-cursors' "https://github.com/terryma/vim-multiple-cursors
+Plugin 'luochen1990/rainbow' "https://github.com/luochen1990/rainbow
 
 call vundle#end()
 filetype plugin indent on
@@ -71,8 +72,7 @@ autocmd BufRead,BufNewFile *.py match BadWhitespace /^\t+/
 "makes trailing whitespace in all lanugages bad
 autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
 
-"Searching for highlighted text
-vnoremap // y/<C-R>"<CR>
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"
 
 let autoparens = 0                                                              
 "create both parens                                                             
@@ -112,6 +112,10 @@ map <F6> :NERDTree<CR>
 map <F7> :! ctags -R -f tags .<CR>                                              
 "F8 toggles AutoParens                                                          
 map <F8> :call AutoParensToggle()<CR>
+"F9 Toggles Rainbow Parens
+map <F9> :RainbowToggle<CR>
+"Searching for highlighted text
+vnoremap // y/<C-R>"<CR>
 
 "PREVIEW WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
