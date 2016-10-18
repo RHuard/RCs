@@ -3,14 +3,14 @@
 
 SCREEN=""                                                                          
 if [ $TERM = "screen" ]; then                                                      
-    SCREEN="%{$fg_bold[white]%}°"                                                                                                                              
-fi                                                                                 
-                                                                                   
-PROMPT_SYMBOL="↳"                                                                  
-PROMPT='%{$fg_bold[cyan]%}%n%{$fg_no_bold[magenta]%}[$HOST]%{$fg_bold[green]%}%3~$(git_prompt_info)$SCREEN
-%{$fg_no_bold[yellow]%}$PROMPT_SYMBOL%{$reset_color%} '                            
+    SCREEN="%{$fg_bold[white]%}°"                                               
+fi                                                                              
+                                                                                
+PROMPT_SYMBOL="↳"                                                               
+PROMPT='%{$fg_bold[cyan]%}%n%{$fg_no_bold[magenta]%}[$HOST]%{$fg_bold[green]%}%3~$(git_prompt_info)
+$SCREEN%{$fg_no_bold[yellow]%}$PROMPT_SYMBOL%{$reset_color%} '                                                                                                 
 RPROMPT='%{%(?.%{$fg[green]%}.%{$fg[red]%})%}%?%{$fg[yellow]%}[%*]%{$reset_color%}'
-ZLE_RPROMPT_INDENT=0 
+ZLE_RPROMPT_INDENT=0   
 
 
 # git theming
