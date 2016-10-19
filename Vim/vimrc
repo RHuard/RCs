@@ -98,6 +98,8 @@ endfunction
                                                                                 
 call AutoParensToggle()
 
+set tags=tags;/
+
 "F2 toggles line number (regular to relative)                                   
 map <F2> :call RelNumToggle()<CR>                                               
 "F3 in command mode now prints the file name                                    
