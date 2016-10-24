@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"   
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R'
 alias less='less -N'
 alias ls="ls -X --group-directories-first --color=auto"
