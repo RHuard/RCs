@@ -8,7 +8,7 @@
 [profiles]
   [[default]]
     use_system_font = False
-    font = Anonymous Pro 12
+    font = Ubuntu Mono 11
     background_image = None
     foreground_color = "#888888"
     background_color = "#0d1b25"
