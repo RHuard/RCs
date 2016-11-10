@@ -13,7 +13,6 @@ rm -f $HOME/.vim/colors/ryslate.vim
 rm -f $HOME/.oh-my-zsh/themes/ryfletcherm.zsh-theme
 rm -f $HOME/.tmux.conf
 
-mkdir -p $HOME/.oh-my-zsh/themes
 
 #link in new ones
 ln -s $HOME/RCs/Bash/bashrc $HOME/.bashrc
