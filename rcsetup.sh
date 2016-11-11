@@ -12,6 +12,8 @@ rm -f $HOME/.config/i3/config
 rm -f $HOME/.vim/colors/ryslate.vim
 rm -f $HOME/.oh-my-zsh/themes/ryfletcherm.zsh-theme
 rm -f $HOME/.tmux.conf
+rm -f $HOME/.xinitrc
+rm -f $HOME/.xmodmap
 
 
 #link in new ones
@@ -21,6 +23,8 @@ ln -s $HOME/RCs/Zsh/zshrc $HOME/.zshrc
 ln -s $HOME/RCs/Pdb/pdbrc $HOME/.pdbrc
 ln -s $HOME/RCs/Zsh/ryfletcherm.zsh-theme $HOME/.oh-my-zsh/themes/ryfletcherm.zsh-theme
 ln -s $HOME/RCs/Tmux/tmux.conf $HOME/.tmux.conf
+ln -s $HOME/RCs/X/xinitrc $HOME/.xinitrc
+ln -s $HOME/RCs/X/xmodmap $HOME/.xmodmap
 
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/terminator
