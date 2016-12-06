@@ -105,7 +105,7 @@ alias mkdir="mkdir -p"
 
 cal
 cowsay -f tux.cow "hello $USER
-                   $(fortune zippy)"
+                   $(fortune computers)"
 date
 
 #enable syntax highlighting
