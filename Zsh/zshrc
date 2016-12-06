@@ -104,7 +104,8 @@ alias spell="saspell"
 alias mkdir="mkdir -p"
 
 cal
-cowsay -f tux.cow "hello $USER"
+cowsay -f tux.cow "hello $USER
+                   $(fortune -a)"
 date
 
 #enable syntax highlighting
