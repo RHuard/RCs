@@ -103,9 +103,10 @@ alias spellcheck="aspell --check"
 alias spell="saspell"
 alias mkdir="mkdir -p"
 
-cal
+
 cowsay -f tux.cow "hello $USER
                    $(fortune computers)"
+cal
 date
 
 #enable syntax highlighting
