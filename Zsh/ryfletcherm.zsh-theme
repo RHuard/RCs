@@ -1,13 +1,14 @@
 #Slightly modified version of the fletcherm theme that comes with oh-my-zsh themes
 # Copied from old version of tonotdo's theme. LSCOLORS modified.
 
+#check to see if in tmux or screen
 SCREEN=""                                                                          
 if [ $TERM = "screen" ]; then                                                      
     SCREEN="%{$fg_bold[white]%}°"                                               
 fi                                                                              
                                                                                 
 PROMPT_SYMBOL="↳"                                                               
-PROMPT='%{$fg_bold[cyan]%}%n%{$fg_no_bold[magenta]%}[$HOST]%{$fg_bold[green]%}%3~$(git_prompt_info)
+PROMPT='%{$fg_bold[cyan]%}%n%{$fg_no_bold[magenta]%}[$HOST]%{$fg_bold[green]%}%3~$(git_prompt_info)${VIMMODE}
 $SCREEN%{$fg_no_bold[yellow]%}$PROMPT_SYMBOL%{$reset_color%} '                                                                                                 
 RPROMPT='%{%(?.%{$fg[green]%}.%{$fg[red]%})%}%?%{$fg[yellow]%}[%*]%{$reset_color%}'
 ZLE_RPROMPT_INDENT=0   
