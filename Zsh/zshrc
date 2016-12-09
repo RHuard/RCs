@@ -62,7 +62,7 @@ bindkey -v
 #git - automatically added
 #syntax highlighting: https://github.com/zsh-users/zsh-syntax-highlighting
 
-plugins=(git zsh-syntax-highlighting)
+plugins=(git history-substring-search zsh-syntax-highlighting)
 
 # User configuration
 
@@ -100,10 +100,13 @@ export LESS=' -R'
 alias less='less -N'
 alias ls="ls -X --group-directories-first --color=auto"
 alias spellcheck="aspell --check"
+alias spell="saspell"
 alias mkdir="mkdir -p"
 
+
+cowsay -f tux.cow "hello $USER
+                   $(fortune computers)"
 cal
-cowsay -f tux.cow "hello $USER"
 date
 
 #enable syntax highlighting
@@ -122,3 +125,19 @@ ZSH_HIGHLIGHT_STYLES[function]="fg=green"
 #for less with syntax highlighting
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R'
+
+#enable vi mode
+bindkey -v
+#make switching modes more responsive
+export KEYTIMEOUT=1
+#reset some keybondings that are changed by vim mode
+bindkey '^P' up-history
+bindkey '^N' down-history
+#default to insert mode
+VIMMODE='[i]'
+#callback for mode change
+function zle-keymap-select {
+  VIMMODE="${${KEYMAP/vimcd/[n]}/(main|viins)/[i]}"
+  zle reset-prompt
+}
+zle -N zle-keymap-select

@@ -22,6 +22,8 @@ Not a dependency for using these configs: but my newtartup repo (https://github.
   * Nerd tree: https://github.com/scrooloose/nerdtree
   * YouCompleteMe: https://github.com/Valloric/YouCompleteMe
   * vim-multiple-cursors: https://github.com/terryma/vim-multiple-cursors
+  * rainbow: https://github.com/luochen1990/rainbow
+
 * Plugins are installed automatically by the rcsetup.sh script. However, YouCompleteMe still needs to be compiled inorder to run
 
 ### Terminator:

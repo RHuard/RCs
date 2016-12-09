@@ -1,25 +1,25 @@
 [global_config]
 [keybindings]
-  go_left = <Alt>H
   go_down = <Alt>J
+  go_left = <Alt>H
   go_right = <Alt>L
   go_up = <Alt>K
   layout_launcher = <Super><Alt>L
-[profiles]
-  [[default]]
-    use_system_font = False
-    font = Anonymous Pro 12
-    background_image = None
-    foreground_color = "#888888"
-    background_color = "#0d1b25"
-    cursor_blink=False
-    cursor_color = "#4f4f4f"
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#0d1b25"
+    background_image = None
+    cursor_blink = False
+    cursor_color = "#4f4f4f"
+    font = DejaVu Sans Mono 10
+    foreground_color = "#888888"
+    use_system_font = False
