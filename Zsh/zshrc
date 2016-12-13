@@ -105,7 +105,7 @@ alias mkdir="mkdir -p"
 
 
 cowsay -f tux.cow "hello $USER
-                   $(fortune computers)"
+                   $(fortune computers -s)"
 cal
 date
 
