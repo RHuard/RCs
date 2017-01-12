@@ -122,3 +122,6 @@ vnoremap // y/<C-R>"<CR>
 "PREVIEW WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+set exrc
+set secure
