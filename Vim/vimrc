@@ -8,7 +8,6 @@ call vundle#begin()
 "this is required for Vundle
 Plugin 'gmarik/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 Plugin 'Valloric/YouCompleteMe' "https://github.com/Valloric/YouCompleteMe
-Plugin 'scrooloose/nerdtree' "https://github.com/scrooloose/nerdtree
 Plugin 'terryma/vim-multiple-cursors' "https://github.com/terryma/vim-multiple-cursors
 Plugin 'luochen1990/rainbow' "https://github.com/luochen1990/rainbow
 Plugin 'tpope/vim-surround' "https://github.com/tpope/vim-surround
@@ -110,7 +109,7 @@ map <F4> :pwd<CR>
 "F5 gets absolute path
 map <F5> :echo expand('%:p')<CR>
 "F6 runs nerd tree
-map <F6> :NERDTree<CR>
+map <F6> :edit .<CR>
 "F7 runs ctags
 map <F7> :! ctags -R -f tags .<CR>
 "F8 toggles AutoParens
