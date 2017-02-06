@@ -105,6 +105,11 @@ map ]q :cnext<CR>
 map [Q :cfirst<CR>
 map ]Q :clast<CR>
 
+"netrw settings [netrw-browse-maps] for help
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+let g:netrw_altv=1
+
 "F2 open vim file manager
 map <F2> :edit .<CR>
 "F3 opens quickfix window
