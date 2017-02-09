@@ -1,5 +1,5 @@
 [global_config]
-  inactive_color_offset = 0.6
+  inactive_color_offset = 0.7
 [keybindings]
   go_down = <Alt>J
   go_left = <Alt>H
