@@ -3,4 +3,6 @@ set spell spelllang=en_us
 set cc=100
 set tw=100
 
-call pencil#init()
+augroup pencil
+    autocmd FileType markdown,mkd,text call pencil#init()
+augroup END
