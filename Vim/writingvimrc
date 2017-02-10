@@ -6,3 +6,5 @@ set tw=100
 augroup pencil
     autocmd FileType markdown,mkd,text call pencil#init()
 augroup END
+
+call AutoParensToggle() "turn off auto parens by default
