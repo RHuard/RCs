@@ -7,4 +7,7 @@ augroup pencil
     autocmd FileType markdown,mkd,text call pencil#init()
 augroup END
 
+"remap F5 for wordcount of highlighted words
+map <F5> :w !wc -w<CR>
+
 call AutoParensToggle() "turn off auto parens by default
