@@ -102,7 +102,7 @@ alias ls="ls -X --group-directories-first --color=auto"
 alias spellcheck="aspell --check"
 alias spell="saspell"
 alias mkdir="mkdir -p"
-
+alias runctags="ctags -R -f tags ."
 
 cowsay -f tux.cow "hello $USER
                    $(fortune computers -s)"
