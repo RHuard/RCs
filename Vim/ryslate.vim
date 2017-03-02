@@ -31,17 +31,17 @@ let colors_name = "slate"
 :hi WarningMsg guifg=salmon ctermfg=1
 :hi String guifg=SkyBlue ctermfg=darkcyan
 :hi Comment term=bold ctermfg=darkmagenta guifg=grey40
-:hi Constant guifg=#ffa0a0 ctermfg=brown
+:hi Constant guifg=#ffa0a0 ctermfg=darkgreen
 :hi Special guifg=darkkhaki ctermfg=brown
 :hi Identifier guifg=salmon ctermfg=darkred
-:hi Include guifg=darkred ctermfg=darkred
+:hi Include guifg=darkred ctermfg=magenta
 :hi PreProc guifg=red guibg=white ctermfg=darkred
 :hi Operator guifg=Red ctermfg=Red
 :hi Define guifg=gold gui=bold ctermfg=yellow
 :hi Type guifg=CornflowerBlue ctermfg=2
 :hi Function guifg=navajowhite ctermfg=brown
 :hi Structure guifg=green ctermfg=green
-:hi LineNr guifg=grey50 ctermfg=3
+:hi LineNr guifg=grey50 ctermfg=darkgray
 :hi Ignore guifg=grey40 cterm=bold ctermfg=7
 :hi Todo guifg=orangered guibg=yellow2
 :hi Directory ctermfg=darkcyan
@@ -55,3 +55,5 @@ let colors_name = "slate"
 :hi Underlined cterm=underline ctermfg=5
 :hi Error guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
 :hi SpellErrors guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
+"python specific colors"
+:hi pythonBuiltin ctermfg=darkgreen
