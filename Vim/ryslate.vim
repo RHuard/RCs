@@ -39,7 +39,7 @@ let colors_name = "slate"
 :hi Operator guifg=Red ctermfg=Red
 :hi Define guifg=gold gui=bold ctermfg=yellow
 :hi Type guifg=CornflowerBlue ctermfg=2
-:hi Function guifg=navajowhite ctermfg=brown
+:hi Function guifg=navajowhite ctermfg=gray
 :hi Structure guifg=green ctermfg=green
 :hi LineNr guifg=grey50 ctermfg=darkgray
 :hi Ignore guifg=grey40 cterm=bold ctermfg=7
@@ -48,12 +48,14 @@ let colors_name = "slate"
 :hi ErrorMsg cterm=bold guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
 :hi VisualNOS cterm=bold,underline
 :hi WildMenu ctermfg=0 ctermbg=3
-:hi DiffAdd ctermbg=4
-:hi DiffChange ctermbg=5
-:hi DiffDelete cterm=bold ctermfg=4 ctermbg=6
+:hi DiffAdd ctermbg=black
+:hi DiffChange ctermbg=gray
+:hi DiffDelete cterm=bold ctermfg=red ctermbg=darkgray
 :hi DiffText cterm=bold ctermbg=1
 :hi Underlined cterm=underline ctermfg=5
 :hi Error guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
 :hi SpellErrors guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
 "python specific colors"
 :hi pythonBuiltin ctermfg=darkgreen
+"C/C++ specific colors
+:hi cUserFunction ctermfg=gray

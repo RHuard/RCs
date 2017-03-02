@@ -10,6 +10,7 @@ rm -f $HOME/.xinitrc
 rm -f $HOME/.config/terminator/config
 rm -f $HOME/.config/i3/config
 rm -f $HOME/.vim/colors/ryslate.vim
+rm -f $HOME/.vim/syntax/c.vim
 rm -f $HOME/.oh-my-zsh/themes/ryfletcherm.zsh-theme
 rm -f $HOME/.tmux.conf
 rm -f $HOME/.xinitrc
@@ -30,10 +31,12 @@ mkdir -p $HOME/.config
 mkdir -p $HOME/.config/terminator
 mkdir -p $HOME/.cinfig/i3
 mkdir -p $HOME/.vim/colors
+mkdir -- $HOME/.vim/syntax
 
 ln -s $HOME/RCs/config/terminator/config $HOME/.config/terminator/config
 ln -s $HOME/RCs/config/i3/config $HOME/.config/i3/config
 ln -s $HOME/RCs/Vim/ryslate.vim $HOME/.vim/colors/ryslate.vim
+ln -s $HOME/RCs/Vim/syntax/c.vim $HOME/.vim/syntax/c.vim
 
 #install vim plugins
 vim +PluginInstall +qall
