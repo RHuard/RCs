@@ -99,6 +99,7 @@ alias spellcheck="aspell --check"
 alias spell="saspell"
 alias mkdir="mkdir -p"
 alias runctags="ctags -R -f tags ."
+alias netrw="vim ."
 
 cowsay -f tux.cow "hello $USER
                    $(fortune computers -s)"
@@ -137,3 +138,4 @@ function zle-keymap-select {
   zle reset-prompt
 }
 zle -N zle-keymap-select
+
