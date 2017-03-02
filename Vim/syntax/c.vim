@@ -2,6 +2,7 @@
 " Language:	C
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
 " Last Change:	2016 Feb 08
+" modifyed by rhuard
 
 " Quit when a (custom) syntax file was already loaded
 if exists("b:current_syntax")
@@ -484,4 +485,6 @@ let &cpo = s:cpo_save
 unlet s:cpo_save
 " vim: ts=8
 
+" rhuard changes
+" highlight function names
 syn match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cType,cDelimiter,cDefine
