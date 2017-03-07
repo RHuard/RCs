@@ -11,6 +11,7 @@ Plugin 'Valloric/YouCompleteMe' "https://github.com/Valloric/YouCompleteMe
 Plugin 'terryma/vim-multiple-cursors' "https://github.com/terryma/vim-multiple-cursors
 Plugin 'luochen1990/rainbow' "https://github.com/luochen1990/rainbow
 Plugin 'tpope/vim-surround' "https://github.com/tpope/vim-surround
+Plugin 'tpope/vim-commentary' "https://github.com/tpope/vim-commentary
 Plugin 'reedes/vim-pencil' "https://github.com/reedes/vim-pencil
 
 call vundle#end()
