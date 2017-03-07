@@ -8,9 +8,10 @@ call vundle#begin()
 "this is required for Vundle
 Plugin 'gmarik/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 Plugin 'Valloric/YouCompleteMe' "https://github.com/Valloric/YouCompleteMe
-Plugin 'scrooloose/nerdtree' "https://github.com/scrooloose/nerdtree
 Plugin 'terryma/vim-multiple-cursors' "https://github.com/terryma/vim-multiple-cursors
 Plugin 'luochen1990/rainbow' "https://github.com/luochen1990/rainbow
+Plugin 'tpope/vim-surround' "https://github.com/tpope/vim-surround
+Plugin 'reedes/vim-pencil' "https://github.com/reedes/vim-pencil
 
 call vundle#end()
 filetype plugin indent on
@@ -100,25 +101,43 @@ call AutoParensToggle()
 
 set tags=tags;/
 
-"F2 toggles line number (regular to relative)
-map <F2> :call RelNumToggle()<CR>
-"F3 in command mode now prints the file name
-map <F3> :echo @%<CR>
-"F4 runs pwd
-map <F4> :pwd<CR>
-"F5 gets absolute path
-map <F5> :echo expand('%:p')<CR>
-"F6 runs nerd tree
-map <F6> :NERDTree<CR>
-"F7 runs ctags
-map <F7> :! ctags -R -f tags .<CR>
-"F8 toggles AutoParens
-map <F8> :call AutoParensToggle()<CR>
-"F9 Toggles Rainbow Parens
-map <F9> :RainbowToggle<CR>
+map [q :cprev<CR>
+map ]q :cnext<CR>
+map [Q :cfirst<CR>
+map ]Q :clast<CR>
+
+"netrw settings [netrw-browse-maps] for help
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+let g:netrw_altv=1
+
+"F2 open vim file manager
+map <F2> :edit .<CR>
+"F3 opens quickfix window
+map <F3> :cw<CR>
+"F4 toggles AutoParens
+map <F4> :call AutoParensToggle()<CR>
+"F5 in command mode now prints the file name
+map <F5> :echo @%<CR>
+"F6 gets absolute path
+map <F6> :echo expand('%:p')<CR>
+"F7 toggles line number (regular to relative)
+map <F7> :call RelNumToggle()<CR>
+"F8 Toggles Rainbow Parens
+map <F8> :RainbowToggle<CR>
+"F9 runs vsplit
+map <F9> :vsplit<CR>
+"F10 runs split
+map <F10> :split<CR>
+"F12 runs ctags
+map <F12> :! ctags -R -f tags .<CR>
 "Searching for highlighted text
 vnoremap // y/<C-R>"<CR>
 
 "PREVIEW WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+"per project vimrcs
+set exrc
+set secure
