@@ -49,9 +49,9 @@ let colors_name = "slate"
 :hi VisualNOS cterm=bold,underline
 :hi WildMenu ctermfg=0 ctermbg=3
 :hi DiffAdd ctermbg=black
-:hi DiffChange ctermbg=gray
-:hi DiffDelete cterm=bold ctermfg=red ctermbg=darkgray
-:hi DiffText cterm=bold ctermbg=1
+:hi DiffChange ctermbg=black
+:hi DiffText cterm=bold ctermbg=black
+:hi DiffDelete cterm=bold ctermfg=yellow ctermbg=magenta
 :hi Underlined cterm=underline ctermfg=5
 :hi Error guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
 :hi SpellErrors guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1

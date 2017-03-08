@@ -11,6 +11,7 @@ Plugin 'Valloric/YouCompleteMe' "https://github.com/Valloric/YouCompleteMe
 Plugin 'terryma/vim-multiple-cursors' "https://github.com/terryma/vim-multiple-cursors
 Plugin 'luochen1990/rainbow' "https://github.com/luochen1990/rainbow
 Plugin 'tpope/vim-surround' "https://github.com/tpope/vim-surround
+Plugin 'tpope/vim-commentary' "https://github.com/tpope/vim-commentary
 Plugin 'reedes/vim-pencil' "https://github.com/reedes/vim-pencil
 
 call vundle#end()
@@ -111,14 +112,14 @@ let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:netrw_altv=1
 
-"F2 open vim file manager
-map <F2> :edit .<CR>
-"F3 opens quickfix window
-map <F3> :cw<CR>
+"F2 opens taglist
+map <F2> :TlistToggle<CR>
+"F3 open vim file manager
+map <F3> :edit .<CR>
 "F4 toggles AutoParens
 map <F4> :call AutoParensToggle()<CR>
-"F5 in command mode now prints the file name
-map <F5> :echo @%<CR>
+"F5 opens a new tab
+map <F5> :tabnew<CR>
 "F6 gets absolute path
 map <F6> :echo expand('%:p')<CR>
 "F7 toggles line number (regular to relative)

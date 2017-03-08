@@ -17,7 +17,6 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#0d1b25"
     background_image = None
     cursor_blink = False
     cursor_color = "#4f4f4f"
