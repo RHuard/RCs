@@ -13,6 +13,7 @@ Plugin 'luochen1990/rainbow' "https://github.com/luochen1990/rainbow
 Plugin 'tpope/vim-surround' "https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-commentary' "https://github.com/tpope/vim-commentary
 Plugin 'reedes/vim-pencil' "https://github.com/reedes/vim-pencil
+Plugin 'majutsushi/tagbar' "https://github.com/majutsushi/tagbar
 
 call vundle#end()
 filetype plugin indent on
@@ -114,18 +115,18 @@ let g:netrw_altv=1
 
 "F2 opens taglist
 map <F2> :TlistToggle<CR>
-"F3 open vim file manager
-map <F3> :edit .<CR>
-"F4 toggles AutoParens
-map <F4> :call AutoParensToggle()<CR>
-"F5 opens a new tab
-map <F5> :tabnew<CR>
-"F6 gets absolute path
-map <F6> :echo expand('%:p')<CR>
-"F7 toggles line number (regular to relative)
+"F3 opens tagbar
+map <F3> :TagbarToggle<CR>
+"F4 opens netrw on current directory
+map <F4> :edit .<CR>
+"F5 prints absolute path of file
+map <F5> :echo expand('%:p')<CR>
+"F6 Toggles auto parens
+map <F6> :call AutoParensToggle()<CR>
+"F7 Toggles line numer (regular to relative)
 map <F7> :call RelNumToggle()<CR>
-"F8 Toggles Rainbow Parens
-map <F8> :RainbowToggle<CR>
+"F8 opens a new tab
+map <F8> :tabnew<CR>
 "F9 runs vsplit
 map <F9> :vsplit<CR>
 "F10 runs split
