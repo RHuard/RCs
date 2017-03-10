@@ -143,3 +143,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "per project vimrcs
 set exrc
 set secure
+
+"set fold to be based on manual. So its there if needed
+set fdm=manual
