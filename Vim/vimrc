@@ -14,6 +14,7 @@ Plugin 'tpope/vim-surround' "https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-commentary' "https://github.com/tpope/vim-commentary
 Plugin 'reedes/vim-pencil' "https://github.com/reedes/vim-pencil
 Plugin 'majutsushi/tagbar' "https://github.com/majutsushi/tagbar
+Plugin 'dhruvasagar/vim-table-mode' "https://github.com/dhruvasagar/vim-table-mode
 
 call vundle#end()
 filetype plugin indent on
