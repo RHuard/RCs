@@ -147,3 +147,7 @@ set secure
 
 "set fold to be based on manual. So its there if needed
 set fdm=manual
+
+"set charlist
+set listchars=tab:>-
+set list
