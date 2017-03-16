@@ -149,5 +149,5 @@ set secure
 set fdm=manual
 
 "set charlist
-set listchars=tab:🢒-,extends:🢖,precedes:🢔
+set listchars=tab:🢒\ ,extends:🢖,precedes:🢔
 set list
