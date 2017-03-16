@@ -9,4 +9,4 @@ ln -s $HOME/RCs/Zsh/ryfletcherm.zsh-theme $HOME/.oh-my-zsh/themes/ryfletcherm.zs
 
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
-$HOME/RCs/rcsetup.sh
+$HOME/RCs/bin/rcsetup.sh
