@@ -106,11 +106,16 @@ endfunction
 call AutoParensToggle()
 
 set tags=tags;/
-
+"quick fix window mappings
 map [q :cprev<CR>
 map ]q :cnext<CR>
 map [Q :cfirst<CR>
 map ]Q :clast<CR>
+"resize mappings
+map <leader>. :vertical resize +5<CR>
+map <leader>, :vertical resize -5<CR>
+map <leader>= :resize +5<CR>
+map <leader>- :resize -5<CR>
 
 "netrw settings [netrw-browse-maps] for help
 let g:netrw_banner=0
