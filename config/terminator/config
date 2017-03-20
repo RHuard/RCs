@@ -3,13 +3,19 @@
 [keybindings]
   go_down = <Alt>J
   go_left = <Alt>H
+  go_next = <Alt>n
+  go_prev = <Alt>p
   go_right = <Alt>L
   go_up = <Alt>K
-  layout_launcher = <Super><Alt>L
+  move_tab_left = <Primary><Shift>p
+  move_tab_right = <Primary><Shift>n
+  split_horiz = <Alt>minus
+  split_vert = <Alt>backslash
 [layouts]
   [[default]]
     [[[child1]]]
       parent = window0
+      profile = default
       type = Terminal
     [[[window0]]]
       parent = ""
