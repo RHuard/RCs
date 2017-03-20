@@ -32,7 +32,7 @@ Not a dependency for using these configs: but my newtartup repo (https://github.
 * Plugins from github are installed automatically by the rcsetup.sh script. However, YouCompleteMe still needs to be compiled inorder to run
 
 ### Terminator:
-* DejaVu Sans Mono 10
+* DejaVu Sans Mono
 
 ### i3
 * None
