@@ -32,7 +32,7 @@ Not a dependency for using these configs: but my newtartup repo (https://github.
 * Plugins from github are installed automatically by the rcsetup.sh script. However, YouCompleteMe still needs to be compiled inorder to run
 
 ### Terminator:
-* uses Annonymous Pro (http://www.marksimonson.com/fonts/view/anonymous-pro) this is not installed for you
+* DejaVu Sans Mono 10
 
 ### i3
 * None
