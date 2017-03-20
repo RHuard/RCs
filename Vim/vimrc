@@ -62,8 +62,11 @@ autocmd BufRead,BufNewFile * set formatoptions-=c formatoptions -=o formatoption
 
 "COLORS
 syntax on
-color ryslate
 "Theme here:
+color ryslate
+"tagbar colors
+highlight TagBarScope ctermfg=darkcyan
+"color column
 set cc=80
 :hi ColorColumn ctermbg=DarkGray
 
