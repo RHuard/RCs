@@ -3,10 +3,11 @@
 [keybindings]
   go_down = <Alt>J
   go_left = <Alt>H
-  go_next = <Alt>n
-  go_prev = <Alt>p
   go_right = <Alt>L
   go_up = <Alt>K
+  go_next = <Alt>n
+  go_prev = <Alt>p
+  layout_launcher = <Shift><Alt>l
   move_tab_left = <Primary><Shift>p
   move_tab_right = <Primary><Shift>n
   split_horiz = <Alt>minus
@@ -28,4 +29,5 @@
     cursor_color = "#4f4f4f"
     font = DejaVu Sans Mono 10
     foreground_color = "#888888"
+    show_titlebar = False
     use_system_font = False
