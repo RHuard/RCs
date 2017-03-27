@@ -54,7 +54,8 @@ let colors_name = "slate"
 :hi DiffDelete cterm=bold ctermfg=yellow ctermbg=magenta
 :hi Underlined cterm=underline ctermfg=5
 :hi Error guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
-:hi SpellErrors guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
+:hi SpellErrors guifg=White guibg=Red cterm=bold ctermfg=black ctermbg=red
+:hi SpellBad cterm=underline ctermfg=red ctermbg=black
 "python specific colors"
 :hi pythonBuiltin ctermfg=darkgreen
 "C/C++ specific colors
