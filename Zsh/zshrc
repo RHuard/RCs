@@ -101,14 +101,9 @@ alias mkdir="mkdir -p"
 alias runctags="ctags -R -f tags ."
 alias netrw="vim ."
 
-cowsay -f tux.cow "hello $USER
-                   $(fortune computers -s)"
-cal
-date
-
-#enable syntax highlighting
+# enable syntax highlighting
 source ~/.oh-my-zsh/plugins/syntax/zsh-syntax-highlighting.zsh
-#custom highlighting for zsh syntax highlighting
+# custom highlighting for zsh syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[command]="fg=green"
 ZSH_HIGHLIGHT_STYLES[builtin]="fg=green"
@@ -122,24 +117,27 @@ ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=white"
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=white"
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument]="fg=yellow"
 
-#setup source-highlight with less
-#for less with syntax highlighting
+# setup source-highlight with less
+# for less with syntax highlighting
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R'
 
-#enable vi mode
+# enable vi mode
 bindkey -v
-#make switching modes more responsive
+# make switching modes more responsive
 export KEYTIMEOUT=1
-#reset some keybondings that are changed by vim mode
+# reset some keybondings that are changed by vim mode
 bindkey '^P' up-history
 bindkey '^N' down-history
-#default to insert mode
+# default to insert mode
 VIMMODE='[i]'
-#callback for mode change
+# callback for mode change
 function zle-keymap-select {
   VIMMODE="${${KEYMAP/vimcd/[n]}/(main|viins)/[i]}"
   zle reset-prompt
 }
 zle -N zle-keymap-select
 
+# print date info
+cal
+date
