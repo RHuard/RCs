@@ -19,10 +19,10 @@ let colors_name = "slate"
 :hi IncSearch guifg=green guibg=black cterm=none ctermfg=yellow ctermbg=green
 :hi ModeMsg guifg=goldenrod cterm=none ctermfg=brown
 :hi MoreMsg guifg=SeaGreen ctermfg=darkgreen
-:hi NonText guifg=RoyalBlue guibg=grey15 cterm=bold ctermfg=blue
+:hi NonText guifg=RoyalBlue guibg=grey15 ctermfg=darkgray
 :hi Question guifg=springgreen ctermfg=green
 :hi Search guibg=peru guifg=wheat cterm=none ctermfg=black ctermbg=yellow
-:hi SpecialKey guifg=yellowgreen ctermfg=darkgreen
+:hi SpecialKey guifg=yellowgreen ctermfg=darkgray
 :hi StatusLine guibg=#c2bfa5 guifg=black gui=none cterm=bold,reverse
 :hi StatusLineNC guibg=#c2bfa5 guifg=grey40 gui=none cterm=reverse
 :hi Title guifg=gold gui=bold cterm=bold ctermfg=yellow
@@ -54,7 +54,8 @@ let colors_name = "slate"
 :hi DiffDelete cterm=bold ctermfg=yellow ctermbg=magenta
 :hi Underlined cterm=underline ctermfg=5
 :hi Error guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
-:hi SpellErrors guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
+:hi SpellErrors guifg=White guibg=Red cterm=bold ctermfg=black ctermbg=red
+:hi SpellBad cterm=underline ctermfg=red ctermbg=black
 "python specific colors"
 :hi pythonBuiltin ctermfg=darkgreen
 "C/C++ specific colors

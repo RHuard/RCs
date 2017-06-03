@@ -10,11 +10,12 @@ rm -f $HOME/.xinitrc
 rm -f $HOME/.config/terminator/config
 rm -f $HOME/.config/i3/config
 rm -f $HOME/.vim/colors/ryslate.vim
-rm -f $HOME/.vim/syntax/c.vim
+rm -f $HOME/.vim/syntax/
 rm -f $HOME/.oh-my-zsh/themes/ryfletcherm.zsh-theme
 rm -f $HOME/.tmux.conf
 rm -f $HOME/.xinitrc
 rm -f $HOME/.xmodmap
+rm -f $HOME/.gitignore_global
 
 
 #link in new ones
@@ -26,6 +27,7 @@ ln -s $HOME/RCs/Zsh/ryfletcherm.zsh-theme $HOME/.oh-my-zsh/themes/ryfletcherm.zs
 ln -s $HOME/RCs/Tmux/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/RCs/X/xinitrc $HOME/.xinitrc
 ln -s $HOME/RCs/X/xmodmap $HOME/.xmodmap
+ln -s $HOME/RCs/Git/gitignore_global $HOME/gitignore-global
 
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/terminator

@@ -1,3 +1,5 @@
 #alias to make ll reset the list command
 #so it will restart at the current cursor position
 alias ll u;;d;;l
+
+import inspect
