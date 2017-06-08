@@ -53,8 +53,8 @@ set shiftwidth=4
 "keep highlighting on
 set hlsearch
 
-"wrap text after certain number of characters
-"autocmd BufRead,BufNewFile * set textwidth=80
+"Turn off wrapping
+set nowrap
 
 "Turn off comment formatting options
 "c auto insert comment leader when wrapping bsed on textwidth
