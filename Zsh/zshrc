@@ -100,6 +100,7 @@ alias spell="saspell"
 alias mkdir="mkdir -p"
 alias runctags="ctags -R -f tags ."
 alias netrw="vim ."
+alias alert='notify-send --urgency=low -i "$( [ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # enable syntax highlighting
 source ~/.oh-my-zsh/plugins/syntax/zsh-syntax-highlighting.zsh
@@ -117,12 +118,6 @@ ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=white"
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=white"
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument]="fg=yellow"
 
-# setup source-highlight with less
-# for less with syntax highlighting
-export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-export LESS=' -R'
-
-# enable vi mode
 bindkey -v
 # make switching modes more responsive
 export KEYTIMEOUT=1
