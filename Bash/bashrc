@@ -31,9 +31,7 @@ fi
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias ls='ls -X --group-directories-first --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -58,7 +56,17 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=' -R'
+alias less='less -N'
+alias spellcheck="aspell --check"
+alias mkdir="mkdir -p"
+alias runctags="ctags -R -f tags ."
+alias spell="saspell"
+alias netrw="vim ."
+
+
+ #enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -69,10 +77,16 @@ PROMPT_COMMAND=__prompt_command
 
 __prompt_command(){
 
+    if [ $? -eq 0 ]; then
+        EXIT='\[\033[32m\]$?'
+    else
+        EXIT='\[\033[31m\]$?'
+   fi
+
     PROMPT='>'
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u\[\033[00;35m\][\h]\[\033[00m\]\[\033[00;32m\]\w\n'
     PS1+='\[\033[2;33m\][\D{%T}]'
-    PS1+='\[\033[1;34m\]$?'
+    PS1+="$EXIT"
     PS1+='\[\033[0;36m\]$PROMPT\[\033[00m\] '
 
 }
