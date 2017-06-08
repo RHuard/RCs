@@ -74,6 +74,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 PROMPT_COMMAND=__prompt_command
+PROMPT_DIRTRIM=3
 
 __prompt_command(){
 
@@ -83,8 +84,14 @@ __prompt_command(){
         EXIT='\[\033[31m\]$?'
    fi
 
+   SCREEN=""
+   if [ $TERM = "screen" ]; then
+       SCREEN="\[\033[37m\]*"
+   fi
+
     PROMPT='>'
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u\[\033[00;35m\][\h]\[\033[00m\]\[\033[00;32m\]\w\n'
+    PS1+="$SCREEN"
     PS1+='\[\033[2;33m\][\D{%T}]'
     PS1+="$EXIT"
     PS1+='\[\033[0;36m\]$PROMPT\[\033[00m\] '
