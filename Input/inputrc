@@ -1,5 +1,12 @@
 set editing-mode vi
 set show-mode-in-prompt on
 
+set keymap vi-command
+
+Control-l: clear-screen
+
+set keymap vi-insert
+Control-l: clear-screen
+
 set vi-ins-mode-string="[i]"
 set vi-cmd-mode-string="[n]"
