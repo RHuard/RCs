@@ -78,9 +78,10 @@ PROMPT_DIRTRIM=3
 
 __prompt_command(){
 
-    if [ $? -eq 0 ]; then
+
+   if [ $? -eq 0 ]; then
         EXIT='\[\033[32m\]$?'
-    else
+   else
         EXIT='\[\033[31m\]$?'
    fi
 
@@ -90,10 +91,10 @@ __prompt_command(){
    fi
 
     PROMPT='>'
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u\[\033[00;35m\][\h]\[\033[00m\]\[\033[00;32m\]\w\n'
-    PS1+="$SCREEN"
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u\[\033[00;35m\][\h]\[\033[00m\]\[\033[00;32m\]\w'
     PS1+='\[\033[2;33m\][\D{%T}]'
     PS1+="$EXIT"
+    PS1+="\n$SCREEN"
     PS1+='\[\033[0;36m\]$PROMPT\[\033[00m\] '
 
 }
