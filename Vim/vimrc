@@ -16,7 +16,7 @@ Plugin 'reedes/vim-pencil' "https://github.com/reedes/vim-pencil
 Plugin 'majutsushi/tagbar' "https://github.com/majutsushi/tagbar
 Plugin 'dhruvasagar/vim-table-mode' "https://github.com/dhruvasagar/vim-table-mode
 Plugin 'craigemery/vim-autotag' "https://github.com/craigemery/vim-autotag
-
+Plugin 'kshenoy/vim-signature' "https://github.com/kshenoy/vim-signature
 
 call vundle#end()
 filetype plugin indent on
