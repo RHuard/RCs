@@ -17,6 +17,7 @@ rm -f $HOME/.xinitrc
 rm -f $HOME/.xmodmap
 rm -f $HOME/.gitignore_global
 rm -f $HOME/.inputrc
+rm -f $HOME/.ipython/profile_default/ipython_config.py
 
 #link in new ones
 ln -s $HOME/RCs/Bash/bashrc $HOME/.bashrc
@@ -29,6 +30,7 @@ ln -s $HOME/RCs/X/xinitrc $HOME/.xinitrc
 ln -s $HOME/RCs/X/xmodmap $HOME/.xmodmap
 ln -s $HOME/RCs/Git/gitignore_global $HOME/gitignore-global
 ln -s $HOME/RCs/Input/inputrc $HOME/.inputrc
+ln -s $HOME/RCs/Ipython/ipython_config.py ~/.ipython/profile_default/ipython_config.py
 
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/terminator
