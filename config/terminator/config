@@ -32,8 +32,9 @@
     show_titlebar = False
     use_system_font = False
   [[Presentation]]
+    background_color = "#ffffff"
     background_image = None
-    use_theme_colors = True
+    foreground_color = "#000000"
   [[Scratchpad]]
     background_darkness = 0.82
     background_image = None

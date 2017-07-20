@@ -2,16 +2,16 @@
 # Copied from old version of tonotdo's theme. LSCOLORS modified.
 
 #check to see if in tmux or screen
-SCREEN=""                                                                          
-if [ $TERM = "screen" ]; then                                                      
-    SCREEN="%{$fg_bold[white]%}°"                                               
-fi                                                                              
-                                                                                
-PROMPT_SYMBOL="↳"                                                               
-PROMPT='%{$fg_no_bold[yellow]%}${VIMMODE}%{$fg_bold[cyan]%}%n%{$fg_no_bold[magenta]%}[$HOST]%{$fg_bold[green]%}%3~$(git_prompt_info)$(git_prompt_status)
-$SCREEN%{$fg_no_bold[yellow]%}$PROMPT_SYMBOL%{$reset_color%} '                                                                                                 
-RPROMPT='%{%(?.%{$fg[green]%}.%{$fg[red]%})%}%?%{$fg_no_bold[yellow]%}[%*]%{$reset_color%}'
-ZLE_RPROMPT_INDENT=0   
+SCREEN=""
+if [ $TERM = "screen" ]; then
+    SCREEN="%{$fg_bold[white]%}°"
+fi
+
+PROMPT_SYMBOL="↳"
+PROMPT='%{$fg_bold[red]%}${VIMMODE}%{$fg_bold[cyan]%}%n%{$fg_bold[magenta]%}[$HOST]%{$fg_bold[black]%}%3~$(git_prompt_info)$(git_prompt_status)
+$SCREEN%{$fg_no_bold[black]%}$PROMPT_SYMBOL%{$reset_color%} '
+RPROMPT='%{%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%}%?%{$fg_bold[black]%}[%*]%{$reset_color%}'
+ZLE_RPROMPT_INDENT=0
 
 
 # git theming
@@ -19,15 +19,15 @@ CLEAN="✓"
 CLEANCOLOR="$fg_bold[green]"
 DIRTY="!"
 DIRTYCOLOR="$bg[magenta]$fg_bold[yellow]"
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg_no_bold[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg_bold[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$CLEANCOLOR%}%{$CLEAN%}%{$reset_color%}%{$fg_bold[blue]%})"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$DIRTYCOLOR%}%{$DIRTY%}%{$reset_color%}%{$fg_bold[blue]%})"
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg_bold[green]%}+"
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg_no_bold[yellow]%}*"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg_no_bold[black]%}*"
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg_bold[red]%}x"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg_bold[cyan]%}~"
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_bold[white]%}^"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_bold[black]%}^"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[magenta]%}?"
 
 
