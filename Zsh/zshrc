@@ -101,6 +101,7 @@ alias mkdir="mkdir -p"
 alias runctags="ctags -R -f tags ."
 alias netrw="vim ."
 alias alert='notify-send --urgency=low -i "$( [ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias running='ps -ax | grep -v "grep" | grep -i '
 
 # enable syntax highlighting
 source ~/.oh-my-zsh/plugins/syntax/zsh-syntax-highlighting.zsh
