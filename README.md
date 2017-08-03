@@ -4,15 +4,14 @@ Various RC's (vim, bash etc...) and other configuration files to make installing
 to install git clone https://github.com/rhuard/RCs.git $HOME/RCs
 
 ## Dependencies:
-Not a dependency for using these configs: but my newtartup repo (https://github.com/rhuard/NewStartup) Takes care most of the external dependencies this repo does not take care of
+Not a dependency for using these configs: but my newstartup repo (https://github.com/rhuard/NewStartup) Takes care most of the external dependencies this repo does not take care of
 
 ### zsh:
-* cowsay (becuase I like to have tux greet me when I log in ;) ) - not handled for you. This is handled in my newstartup repo
 * the zsh syntax highlight plugin (https://github.com/zsh-users/zsh-syntax-highlighting.git) - this is handled for you
 * source-highlighting package so less will open with colors - not handled for you. This is handled in my newstartup repo
 
 ### bash:
-* honestly I don't use bash now that I have zsh, so I am not sure the state of my bashrc. I mostly keep it here so I have something for if I am stuck in a situtation where I need to use bash and I am unable to get zsh. So I make no promises about this
+* none
 
 ### pdb:
 * none
@@ -32,16 +31,19 @@ Not a dependency for using these configs: but my newtartup repo (https://github.
 * Plugins from github are installed automatically by the rcsetup.sh script. However, YouCompleteMe still needs to be compiled inorder to run
 
 ### Terminator:
-* DejaVu Sans Mono
+* none
 
 ### i3
-* None
+* none
 
 ### tmux
-* None
+* none
 
 ### X
-* None
+* none
+
+### Input
+* none
 
 ## Install:
 ````
