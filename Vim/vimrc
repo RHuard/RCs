@@ -17,6 +17,7 @@ Plugin 'majutsushi/tagbar' "https://github.com/majutsushi/tagbar
 Plugin 'dhruvasagar/vim-table-mode' "https://github.com/dhruvasagar/vim-table-mode
 Plugin 'craigemery/vim-autotag' "https://github.com/craigemery/vim-autotag
 Plugin 'kshenoy/vim-signature' "https://github.com/kshenoy/vim-signature
+Plugin 'nvie/vim-flake8' "https://github.com/nvie/vim-flake8
 
 call vundle#end()
 filetype plugin indent on
@@ -83,7 +84,7 @@ autocmd BufRead,BufNewFile *.py match BadWhitespace /^\t+/
 autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
 
 "remove bad white space on save
-autocmd BufWritePre * %s/\s\+$//g
+autocmd BufWritePre * %s/\s\+$//ge
 
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"
 
@@ -148,8 +149,11 @@ map <F9> :vsplit<CR>
 map <F10> :split<CR>
 "F12 runs ctags
 map <F12> :! ctags -R -f tags .<CR>
+"leader f calls flake8
+map <leader>f :call Flake8()<CR>
 "Searching for highlighted text
 vnoremap // y/<C-R>"<CR>
+
 
 "PREVIEW WINDOWS
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
