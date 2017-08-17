@@ -131,7 +131,7 @@ map <F5> :echo expand('%:p')<CR>
 " F6 Toggles auto parens
 map <F6> :call AutoParensToggle()<CR>
 " F7 Toggles line numer (regular to relative)
-map <F7> :call RelNumToggle()<CR>
+map <F7> :call Flake8()<CR>
 " F8 opens a new tab
 map <F8> :tabnew<CR>
 " F9 runs vsplit
@@ -141,7 +141,7 @@ map <F10> :split<CR>
 " F12 runs ctags
 map <F12> :! ctags -R -f tags .<CR>
 " leader f calls flake8
-map <leader>f :call Flake8()<CR>
+map <leader>R :call RelNumToggle()<CR>
 " quick fix window mappings
 map [q :cprev<CR>
 map ]q :cnext<CR>
