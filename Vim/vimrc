@@ -5,7 +5,7 @@ filetype on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-"this is required for Vundle
+" this is required for Vundle
 Plugin 'gmarik/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 " Plugin 'Valloric/YouCompleteMe' "https://github.com/Valloric/YouCompleteMe
 Plugin 'terryma/vim-multiple-cursors' "https://github.com/terryma/vim-multiple-cursors
@@ -26,10 +26,55 @@ set ruler      "show the cursor pistion all times
 set showcmd    "display incomplete commands
 set incsearch  "do incremental searching
 set showmatch  "show matching parens
+set tabstop=4 "set tabstop
+set expandtab "set soft tab
+set shiftwidth=4 "indentation shift amount
+set hlsearch "keep highlighting on
+set nowrap "Turn off wrapping
+set cursorline
+set tags=tags;/
+" per project vimrcs
+set exrc
+set secure
+" set fold to be based on manual. So its there if needed
+set fdm=manual
+" set charlist
+set listchars=tab:.\ ,extends:>,precedes:<
+set list
+" netrw settings [netrw-browse-maps] for help
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+let g:netrw_altv=1
+" colors
+syntax on
+" theme here:
+color ryslate
+" tagbar colors
+highlight TagBarScope ctermfg=darkcyan
+highlight TagbarHighlight ctermbg=cyan  ctermfg=white
+" color column
+set cc=80
+hi ColorColumn ctermbg=DarkGray
+
+" turn off comment formatting options
+" c auto insert comment leader when wrapping bsed on textwidth
+" o insert comment leader when using o or O
+" r insert coment leader when hitting <Enter> in insert mode
+autocmd BufRead,BufNewFile * set formatoptions-=c formatoptions -=o formatoptions -=r
+" highlight bad whitespace
+highlight BadWhitespace ctermbg=red guibg=red
+" makes tabs in beginning of line in Python bad whitespace
+autocmd BufRead,BufNewFile *.py match BadWhitespace /^\t+/
+" makes trailing whitespace in all lanugages bad
+autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
+" preview windows
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"
 
 "Line Numbers
 let num = 0
-
 function! RelNumToggle()
     if g:num
         let g:num = 0
@@ -40,49 +85,7 @@ function! RelNumToggle()
         set number
     endif
 endfunction
-
 call RelNumToggle()
-
-"Formating
-"set tabstop and turn into softabs
-set tabstop=4
-set expandtab
-"indentation shift amount
-set shiftwidth=4
-
-"keep highlighting on
-set hlsearch
-
-"Turn off wrapping
-set nowrap
-
-"Turn off comment formatting options
-"c auto insert comment leader when wrapping bsed on textwidth
-"o insert comment leader when using o or O
-"r insert coment leader when hitting <Enter> in insert mode
-autocmd BufRead,BufNewFile * set formatoptions-=c formatoptions -=o formatoptions -=r
-
-"COLORS
-syntax on
-"Theme here:
-color ryslate
-"tagbar colors
-highlight TagBarScope ctermfg=darkcyan
-highlight TagbarHighlight ctermbg=cyan  ctermfg=white
-"color column
-set cc=80
-:hi ColorColumn ctermbg=DarkGray
-
-set cursorline
-
-"highlight bad whitespace
-highlight BadWhitespace ctermbg=red guibg=red
-"makes tabs in beginning of line in Python bad whitespace
-autocmd BufRead,BufNewFile *.py match BadWhitespace /^\t+/
-"makes trailing whitespace in all lanugages bad
-autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
-
-let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"
 
 let autoparens = 0
 "create both parens
@@ -105,25 +108,7 @@ function! AutoParensToggle()
         inoremap < <><Esc>i
     endif
 endfunction
-
 call AutoParensToggle()
-
-set tags=tags;/
-"quick fix window mappings
-map [q :cprev<CR>
-map ]q :cnext<CR>
-map [Q :cfirst<CR>
-map ]Q :clast<CR>
-"resize mappings
-map <leader>. :vertical resize +5<CR>
-map <leader>, :vertical resize -5<CR>
-map <leader>= :resize +5<CR>
-map <leader>- :resize -5<CR>
-
-"netrw settings [netrw-browse-maps] for help
-let g:netrw_banner=0
-let g:netrw_liststyle=3
-let g:netrw_altv=1
 
 "F2 opens taglist
 map <F2> :TlistToggle<CR>
@@ -135,9 +120,9 @@ map <F4> :edit .<CR>
 map <F5> :echo expand('%:p')<CR>
 "F6 Toggles auto parens
 map <F6> :call AutoParensToggle()<CR>
-"F7 Toggles line numer (regular to relative)
-map <F7> :call RelNumToggle()<CR>
-"F8 opens a new tab
+" F7 Toggles line numer (regular to relative)
+map <F7> :call Flake8()<CR>
+" F8 opens a new tab
 map <F8> :tabnew<CR>
 "F9 runs vsplit
 map <F9> :vsplit<CR>
@@ -145,20 +130,22 @@ map <F9> :vsplit<CR>
 map <F10> :split<CR>
 "F12 runs ctags
 map <F12> :! ctags -R -f tags .<CR>
-"Searching for highlighted text
+" leader f calls flake8
+map <leader>R :call RelNumToggle()<CR>
+" quick fix window mappings
+map [q :cprev<CR>
+map ]q :cnext<CR>
+map [Q :cfirst<CR>
+map ]Q :clast<CR>
+" resize mappings
+map <leader>. :vertical resize +5<CR>
+map <leader>, :vertical resize -5<CR>
+map <leader>= :resize +5<CR>
+map <leader>- :resize -5<CR>
+" map insert calls
+map <leader>H :call InsertHelix()<CR>
+map <leader>h :call InsertCase()<CR>
+map <leader>N :call InsertNDU()<CR>
+map <leader>P :call InsertPython()<CR>
+" searching for highlighted text
 vnoremap // y/<C-R>"<CR>
-
-"PREVIEW WINDOWS
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-"per project vimrcs
-set exrc
-set secure
-
-"set fold to be based on manual. So its there if needed
-set fdm=manual
-
-"set charlist
-set listchars=tab:.\ ,extends:>,precedes:<
-set list
