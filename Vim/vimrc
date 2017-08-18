@@ -154,5 +154,8 @@ map <leader>= :resize +5<CR>
 map <leader>- :resize -5<CR>
 " insert calls
 map <leader>P :call InsertPython()<CR>
+" buffers
+map <leader>l :bn<CR>
+map <leader>h :bp<CR>
 " searching for highlighted text
 vnoremap // y/<C-R>"<CR>
