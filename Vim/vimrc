@@ -157,5 +157,7 @@ map <leader>P :call InsertPython()<CR>
 " buffers
 map <leader>l :bn<CR>
 map <leader>h :bp<CR>
+map <leader>E :enew<CR>
+map <leader>d :bd<CR>
 " searching for highlighted text
 vnoremap // y/<C-R>"<CR>
