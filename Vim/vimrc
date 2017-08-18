@@ -147,5 +147,8 @@ map <leader>H :call InsertHelix()<CR>
 map <leader>h :call InsertCase()<CR>
 map <leader>N :call InsertNDU()<CR>
 map <leader>P :call InsertPython()<CR>
+" buffers
+map <leader>l :bn<CR>
+map <leader>h :bp<CR>
 " searching for highlighted text
 vnoremap // y/<C-R>"<CR>
