@@ -34,7 +34,7 @@ ln -s $HOME/RCs/Ipython/ipython_config.py ~/.ipython/profile_default/ipython_con
 
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/terminator
-mkdir -p $HOME/.cinfig/i3
+mkdir -p $HOME/.config/i3
 mkdir -p $HOME/.vim/colors
 mkdir -p $HOME/.vim/syntax
 
