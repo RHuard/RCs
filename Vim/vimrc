@@ -84,6 +84,7 @@ function! RelNumToggle()
     if g:num
         let g:num = 0
         set norelativenumber
+        set number
     else
         let g:num = 1
         set relativenumber
@@ -142,6 +143,8 @@ map <F10> :split<CR>
 map <F12> :! ctags -R -f tags .<CR>
 " leader f calls flake8
 map <leader>R :call RelNumToggle()<CR>
+" Turn off numbers
+map <leader>N :set nonumber<CR>:set norelativenumber<CR>:let g:num=0<CR>
 " quick fix window mappings
 map [q :cprev<CR>
 map ]q :cnext<CR>
