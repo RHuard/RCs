@@ -67,6 +67,8 @@ highlight BadWhitespace ctermbg=red guibg=red
 autocmd BufRead,BufNewFile *.py match BadWhitespace /^\t+/
 " makes trailing whitespace in all lanugages bad
 autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
+" remove bad white space on save
+autocmd BufWritePre * %s/\s\+$//ge
 " preview windows
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
