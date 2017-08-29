@@ -35,6 +35,6 @@ ln -s $HOME/RCs/Vim/ryslate.vim $HOME/.vim/colors/ryslate.vim
 ln -s $HOME/RCs/Vim/syntax/c.vim $HOME/.vim/syntax/c.vim
 
 #install vim plugins
-# vim +PluginInstall +qall
+vim +PluginInstall +qall
 
 echo "STILL NEED TODO: compile youcompleteme"
