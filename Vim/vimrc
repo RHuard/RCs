@@ -41,7 +41,7 @@ set secure
 " set fold to be based on manual. So its there if needed
 set fdm=manual
 " set charlist
-set listchars=tab:.\ ,extends:>,precedes:<
+set listchars=tab:🢒\ ,extends:🢖,precedes:🢔
 set list
 " set utf-8 for you complete me
 set encoding=utf-8
