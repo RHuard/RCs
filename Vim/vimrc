@@ -18,9 +18,11 @@ Plugin 'dhruvasagar/vim-table-mode' "https://github.com/dhruvasagar/vim-table-mo
 Plugin 'craigemery/vim-autotag' "https://github.com/craigemery/vim-autotag
 Plugin 'kshenoy/vim-signature' "https://github.com/kshenoy/vim-signature
 Plugin 'nvie/vim-flake8' "https://github.com/nvie/vim-flake8
+Bundle 'taglist.vim'
 
 call vundle#end()
 filetype plugin indent on
+
 
 set history=50 "50 lines of command line history
 set ruler      "show the cursor pistion all times
@@ -41,6 +43,8 @@ set fdm=manual
 " set charlist
 set listchars=tab:.\ ,extends:>,precedes:<
 set list
+" set utf-8 for you complete me
+set encoding=utf-8
 " netrw settings [netrw-browse-maps] for help
 let g:netrw_banner=0
 let g:netrw_liststyle=3
