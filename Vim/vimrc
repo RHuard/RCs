@@ -39,7 +39,7 @@ set secure
 " set fold to be based on manual. So its there if needed
 set fdm=manual
 " set charlist
-set listchars=tab:🢒\ ,extends:🢖,precedes:🢔
+set listchars=tab:.\ ,extends:>,precedes:<
 set list
 " netrw settings [netrw-browse-maps] for help
 let g:netrw_banner=0
