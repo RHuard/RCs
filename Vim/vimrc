@@ -18,6 +18,7 @@ Plugin 'dhruvasagar/vim-table-mode' "https://github.com/dhruvasagar/vim-table-mo
 Plugin 'craigemery/vim-autotag' "https://github.com/craigemery/vim-autotag
 Plugin 'kshenoy/vim-signature' "https://github.com/kshenoy/vim-signature
 Plugin 'nvie/vim-flake8' "https://github.com/nvie/vim-flake8
+Bundle 'taglist.vim'
 
 call vundle#end()
 filetype plugin indent on
