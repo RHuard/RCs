@@ -64,7 +64,7 @@ alias mkdir="mkdir -p"
 alias runctags="ctags -R -f tags ."
 alias spell="saspell"
 alias netrw="vim ."
-
+alias running='ps -ax | grep -v "grep" | grep -i '
 
  #enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
