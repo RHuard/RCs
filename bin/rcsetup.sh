@@ -33,5 +33,3 @@ ln -s $HOME/RCs/Ipython/ipython_config.py ~/.ipython/profile_default/ipython_con
 ln -s $HOME/RCs/config/terminator/config $HOME/.config/terminator/config
 ln -s $HOME/RCs/Vim/ryslate.vim $HOME/.vim/colors/ryslate.vim
 ln -s $HOME/RCs/Vim/syntax/c.vim $HOME/.vim/syntax/c.vim
-
-echo "STILL NEED TODO: Install Vim Plugins"
