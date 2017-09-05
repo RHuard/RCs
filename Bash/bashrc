@@ -97,6 +97,11 @@ __prompt_command(){
     PS1+="\n$SCREEN"
     PS1+='\[\033[0;36m\]$PROMPT\[\033[00m\] '
 
+    if [[ $VIRTUAL_ENV != "" ]]
+        then
+            PS1="(${VIRTUAL_ENV##*/})"$PS1
+    fi
+
 }
 
 cal
