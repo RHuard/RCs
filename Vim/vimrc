@@ -1,5 +1,5 @@
 set nocompatible
-filetype on
+filetype off
 
 " https://github.com/gmarik/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -22,6 +22,7 @@ Plugin 'rust-lang/rust.vim' "https://github.com/rust-lang/rust.vim
 Bundle 'taglist.vim'
 
 call vundle#end()
+filetype on
 filetype plugin indent on
 
 set history=50 "50 lines of command line history
