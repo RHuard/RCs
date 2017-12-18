@@ -64,7 +64,7 @@ alias mkdir="mkdir -p"
 alias runctags="ctags -R -f tags ."
 alias spell="saspell"
 alias netrw="vim ."
-
+alias running='ps -ax | grep -v "grep" | grep -i '
 
  #enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -96,6 +96,11 @@ __prompt_command(){
     PS1+="$EXIT"
     PS1+="\n$SCREEN"
     PS1+='\[\033[0;36m\]$PROMPT\[\033[00m\] '
+
+    if [[ $VIRTUAL_ENV != "" ]]
+        then
+            PS1="(${VIRTUAL_ENV##*/})"$PS1
+    fi
 
 }
 

@@ -19,6 +19,7 @@ Plugin 'craigemery/vim-autotag' "https://github.com/craigemery/vim-autotag
 Plugin 'kshenoy/vim-signature' "https://github.com/kshenoy/vim-signature
 Plugin 'nvie/vim-flake8' "https://github.com/nvie/vim-flake8
 Plugin 'rust-lang/rust.vim' "https://github.com/rust-lang/rust.vim
+Bundle 'taglist.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -85,6 +86,7 @@ function! RelNumToggle()
     if g:num
         let g:num = 0
         set norelativenumber
+        set number
     else
         let g:num = 1
         set relativenumber
@@ -143,6 +145,8 @@ map <F10> :split<CR>
 map <F12> :! ctags -R -f tags .<CR>
 " leader f calls flake8
 map <leader>R :call RelNumToggle()<CR>
+" Turn off numbers
+map <leader>N :set nonumber<CR>:set norelativenumber<CR>:let g:num=0<CR>
 " quick fix window mappings
 map [q :cprev<CR>
 map ]q :cnext<CR>
