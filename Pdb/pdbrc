@@ -2,4 +2,7 @@
 #so it will restart at the current cursor position
 alias ll u;;d;;l
 
+alias pd for k in dir(%1): print(k)
+alias pv for k in dir(%1): print(k,' = ',getattr(%1, k))
+
 import inspect
