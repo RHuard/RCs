@@ -158,7 +158,10 @@ map <leader>. :vertical resize +5<CR>
 map <leader>, :vertical resize -5<CR>
 map <leader>= :resize +5<CR>
 map <leader>- :resize -5<CR>
-" insert calls
+" insert lines with out entering insertmode
+map <leader>o o<Esc>
+map <leader>O O<Esc>
+" insert template calls
 map <leader>P :call InsertPython()<CR>
 " buffers
 map <leader>l :bn<CR>
