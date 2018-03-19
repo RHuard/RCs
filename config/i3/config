@@ -201,6 +201,11 @@ bindsym Mod4+Shift+F9 floating toggle
 for_window [instance="scratchpad"] move window to scratchpad, scratchpad show
 bindsym Mod4+F2 exec --no-startup-id terminator -p Scratchpad -c scratchpad
 exec --no-startup-id xcompmgr -c -f -n
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
 ######################################################################
 # automatically start i3-config-wizard to offer the user to create a
 # keysym-based config which used their favorite modifier (alt or windows)
