@@ -26,10 +26,10 @@ font pango:monospace 8
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $up k
+set $down j
+set $left l
+set $right h
 
 # use Mouse+Mod4 to drag floating windows to their wanted position
 floating_modifier Mod4
@@ -72,10 +72,10 @@ bindsym Mod4+Shift+Up move up
 bindsym Mod4+Shift+Right move right
 
 # split in horizontal orientation
-bindsym Mod4+h split h
+bindsym Mod4+| split h
 
 # split in vertical orientation
-bindsym Mod4+v split v
+bindsym Mod4+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym Mod4+f fullscreen toggle
@@ -95,11 +95,11 @@ bindsym Mod4+space focus mode_toggle
 bindsym Mod4+a focus parent                                                                                                                                                               1,1           Top
 
 # move the currently focused window to the scratchpad
-bindsym Mod4+Shift+minus move scratchpad
+# bindsym Mod4+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym Mod4+minus scratchpad show
+# bindsym Mod4+minus scratchpad show
 
 # switch to workspace
 bindsym Mod4+1 workspace 1
