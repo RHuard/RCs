@@ -137,4 +137,3 @@ zle -N zle-keymap-select
 
 # print date info
 cal
-date
