@@ -109,7 +109,6 @@ function! AutoParensToggle()
         inoremap [ [
         inoremap ' '
         inoremap " "
-        inoremap < <
     else
         let g:autoparens = 1
         inoremap { {}<Esc>i
@@ -117,7 +116,6 @@ function! AutoParensToggle()
         inoremap [ []<Esc>i
         inoremap ' ''<Esc>i
         inoremap " ""<Esc>i
-        inoremap < <><Esc>i
     endif
 endfunction
 call AutoParensToggle()
