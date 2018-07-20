@@ -166,7 +166,7 @@ map ]q :cnext<CR>
 map [Q :cfirst<CR>
 map ]Q :clast<CR>
 " scroll mappings
-map zl <c-y>
+map zk <c-y>
 map zj <c-e>
 " resize mappings
 map <leader>. :vertical resize +5<CR>
