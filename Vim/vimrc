@@ -84,6 +84,17 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"
 
+" use ranger as a file manager/exporer
+" https://www.everythingcli.org/use-ranger-as-a-file-explorer-in-vim
+function RangerExplorer()
+    exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
+    if filereadable('/tmp/vim_ranger_current_file')
+        exec 'edit ' . system('cat /tmp/vim_ranger_current_file')
+        call system('rm /tmp/vim_ranger_current_file')
+    endif
+    redraw!
+endfun
+
 " line number mode
 let num = 0
 function! RelNumToggle()
@@ -154,6 +165,9 @@ map [q :cprev<CR>
 map ]q :cnext<CR>
 map [Q :cfirst<CR>
 map ]Q :clast<CR>
+" scroll mappings
+map zk <c-y>
+map zj <c-e>
 " resize mappings
 map <leader>. :vertical resize +5<CR>
 map <leader>, :vertical resize -5<CR>
@@ -173,3 +187,5 @@ map <leader>d :bd<CR>
 map <leader>S :syntax sync fromstart<CR>
 " searching for highlighted text
 vnoremap // y/<C-R>"<CR>
+" Call Ranger for file management
+map <Leader>r :call RangerExplorer()<CR>
