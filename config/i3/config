@@ -185,11 +185,18 @@ bar {
 }
 
 bindsym Mod4+F9 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-bindsym Mod4+F10 exec amixer -q sset Master 5%+
-bindsym Mod4+F11 exec amixer -q sset Master 5%-
+# audio buttons
+# F10 incase audio raise button doesn't exist
+bindsym Mod4+F10 exec amixer -D pulse set Master 5%+
+bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+
+# F11 incase audio lower does not exist
+bindsym Mod4+F11 exec amixer -D pulse set Master 5%-
+bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 5%-
+# F12 incase audio mute does not exist
 bindsym Mod4+F12 exec amixer -D pulse set Master 1+ toggle
-#bindsym Mod4+F1 exec i3lock -i $HOME/Pictures/Wallpapers/CurrentWallPaper.png -t
-#exec --no-startup-id feh --bg-fill $HOME/Pictures/Desktop/CurrentDesktop.jpg
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+bindsym Mod4+F1 exec i3lock -i $HOME/Pictures/Wallpapers/CurrentWallPaper.png -t
+exec --no-startup-id feh --bg-fill $HOME/Pictures/Desktop/CurrentDesktop.jpg
 focus_follows_mouse no
 # Make the currently focused window a scratchpad
 bindsym Mod4+Shift+F8 move scratchpad
