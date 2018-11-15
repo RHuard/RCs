@@ -131,6 +131,19 @@ function! AutoParensToggle()
 endfunction
 call AutoParensToggle()
 
+"set and unset mode
+let pastemode = 0
+function! PasteModeToggle()
+    if g:pastemode
+        let g:pastemode = 0
+        set paste
+    else
+        let g:pastemode = 1
+        set nopaste
+    endif
+endfunction
+call PasteModeToggle()
+
 function! InsertPython()
     -1read ~/RCs/Vim/VimTemplates/python
     call cursor(2,1)
@@ -145,7 +158,7 @@ map <F4> :edit .<CR>
 " F5 prints absolute path of file
 map <F5> :echo expand('%:p')<CR>
 " F6 Toggles auto parens
-map <F6> :call AutoParensToggle()<CR>
+map <F6> :call PasteModeToggle()<CR>
 " F7 Toggles line numer (regular to relative)
 map <F7> :call Flake8()<CR>
 " F8 opens a new tab
