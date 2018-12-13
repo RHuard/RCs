@@ -202,3 +202,5 @@ map <leader>S :syntax sync fromstart<CR>
 vnoremap // y/<C-R>"<CR>
 " Call Ranger for file management
 map <Leader>r :call RangerExplorer()<CR>
+" clear marks a-z and A-Z
+map <leader>m :delmarks a-zA-Z<CR>
