@@ -1,8 +1,12 @@
-#alias to make ll reset the list command
-#so it will restart at the current cursor position
+# alias to make ll reset the list command
+# so it will restart at the current cursor position
 alias ll u;;d;;l
 
+# print every key of dict on new line
 alias pd for k in dir(%1): print(k)
+# print k = value for every item in a dict on one line
 alias pv for k in dir(%1): print(k,' = ',getattr(%1, k))
+# print every item in list on one line
+alias pl for i in %1: print(i)
 
 import inspect
