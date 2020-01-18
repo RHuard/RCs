@@ -62,7 +62,7 @@ bindkey -v
 #git - automatically added
 #syntax highlighting: https://github.com/zsh-users/zsh-syntax-highlighting
 
-plugins=(git history-substring-search zsh-syntax-highlighting)
+plugins=(git history-substring-search)
 
 # User configuration
 
@@ -139,3 +139,4 @@ zle -N zle-keymap-select
 
 # print date info
 cal
+
