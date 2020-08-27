@@ -25,6 +25,7 @@ call vundle#end()
 filetype on
 filetype plugin indent on
 
+set encoding=utf-8
 set history=50 "50 lines of command line history
 set ruler      "show the cursor pistion all times
 set showcmd    "display incomplete commands
