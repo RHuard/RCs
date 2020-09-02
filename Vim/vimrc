@@ -47,6 +47,7 @@ set listchars=tab:🢒\ ,extends:🢖,precedes:🢔
 set list
 "set hidden to hide new unsave buffers
 set hidden
+set lazyredraw "don't redraw screen in middle of macro execution
 
 "netrw settings [netrw-browse-maps] for help
 let g:netrw_banner=0
