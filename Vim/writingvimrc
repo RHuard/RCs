@@ -1,4 +1,7 @@
-"Vimrc specific to writing prose To use symling into writing project directory
+"Vimrc specific to writing prose
+
+"To use symling into writing project directory
+
 set spell spelllang=en_us
 set cc=100
 set tw=100

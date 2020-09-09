@@ -11,6 +11,8 @@ rm -f $HOME/.config/terminator/config
 rm -f $HOME/.config/i3/config
 rm -f $HOME/.vim/colors/ryslate.vim
 rm -f $HOME/.vim/syntax/
+rm -f $HOME/.config/nvim/init.vim
+rm -f $HOME/.config/nvim/colors/ryslate.vim
 rm -f $HOME/.oh-my-zsh/themes/ryfletcherm.zsh-theme
 rm -f $HOME/.tmux.conf
 rm -f $HOME/.xinitrc
@@ -22,6 +24,7 @@ rm -f $HOME/.ipython/profile_default/ipython_config.py
 #link in new ones
 ln -s $HOME/RCs/Bash/bashrc $HOME/.bashrc
 ln -s $HOME/RCs/Vim/vimrc $HOME/.vimrc
+ln -s $HOME/RCs/Vim/vimrc $HOME/.config/nvim/init.vim
 ln -s $HOME/RCs/Zsh/zshrc $HOME/.zshrc
 ln -s $HOME/RCs/Pdb/pdbrc $HOME/.pdbrc
 ln -s $HOME/RCs/Zsh/ryfletcherm.zsh-theme $HOME/.oh-my-zsh/themes/ryfletcherm.zsh-theme
@@ -41,9 +44,11 @@ mkdir -p $HOME/.vim/syntax
 ln -s $HOME/RCs/config/terminator/config $HOME/.config/terminator/config
 ln -s $HOME/RCs/config/i3/config $HOME/.config/i3/config
 ln -s $HOME/RCs/Vim/ryslate.vim $HOME/.vim/colors/ryslate.vim
+ln -s $HOME/RCs/Vim/ryslate.vim $HOME/.config/nvim/colors/ryslate.vim
 ln -s $HOME/RCs/Vim/syntax/c.vim $HOME/.vim/syntax/c.vim
 
-#install vim plugins
-vim +PluginInstall +qall
+#install vim/nvim plugins
+vim +PlugInstall +qall
+nvim +PlugInstall +qall
 
 echo "STILL NEED TODO: compile youcompleteme"

@@ -1,27 +1,29 @@
 set nocompatible
 filetype off
 
-" https://github.com/gmarik/Vundle.vim
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if has('nvim') "neovim
+    call plug#begin("~/.local/share/nvim/plugged")
+else "vim
+    call plug#begin("~/.vim/plugged")
+endif
 
-" this is required for Vundle
-Plugin 'gmarik/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
-Plugin 'Valloric/YouCompleteMe' "https://github.com/Valloric/YouCompleteMe
-Plugin 'terryma/vim-multiple-cursors' "https://github.com/terryma/vim-multiple-cursors
-Plugin 'luochen1990/rainbow' "https://github.com/luochen1990/rainbow
-Plugin 'tpope/vim-surround' "https://github.com/tpope/vim-surround
-Plugin 'tpope/vim-commentary' "https://github.com/tpope/vim-commentary
-Plugin 'reedes/vim-pencil' "https://github.com/reedes/vim-pencil
-Plugin 'majutsushi/tagbar' "https://github.com/majutsushi/tagbar
-Plugin 'dhruvasagar/vim-table-mode' "https://github.com/dhruvasagar/vim-table-mode
-Plugin 'craigemery/vim-autotag' "https://github.com/craigemery/vim-autotag
-Plugin 'kshenoy/vim-signature' "https://github.com/kshenoy/vim-signature
-Plugin 'nvie/vim-flake8' "https://github.com/nvie/vim-flake8
-Plugin 'rust-lang/rust.vim' "https://github.com/rust-lang/rust.vim
-Bundle 'taglist.vim'
+"Plugin 'Valloric/YouCompleteMe' "https://github.com/Valloric/YouCompleteMe
+Plug 'terryma/vim-multiple-cursors' "https://github.com/terryma/vim-multiple-cursors
+Plug 'luochen1990/rainbow' "https://github.com/luochen1990/rainbow
+Plug 'tpope/vim-surround' "https://github.com/tpope/vim-surround
+Plug 'tpope/vim-commentary' "https://github.com/tpope/vim-commentary
+Plug 'reedes/vim-pencil' "https://github.com/reedes/vim-pencil
+Plug 'majutsushi/tagbar' "https://github.com/majutsushi/tagbar
+Plug 'dhruvasagar/vim-table-mode' "https://github.com/dhruvasagar/vim-table-mode
+Plug 'craigemery/vim-autotag' "https://github.com/craigemery/vim-autotag
+Plug 'kshenoy/vim-signature' "https://github.com/kshenoy/vim-signature
+Plug 'nvie/vim-flake8' "https://github.com/nvie/vim-flake8
+Plug 'rust-lang/rust.vim' "https://github.com/rust-lang/rust.vim
+Plug 'yegappan/taglist' "https://vimawesome.com/plugin/taglist-vim
 
-call vundle#end()
+call plug#end()
+
+
 filetype on
 filetype plugin indent on
 
@@ -149,6 +151,9 @@ function! InsertPython()
     call cursor(2,1)
 endfunction
 
+" Pencil status line to let you know when its enabled
+set rulerformat=%-12.(%l,%c%V%)%{PencilMode()}\ %P
+
 " F2 opens taglist
 map <F2> :TlistToggle<CR>
 " F3 opens tagbar
@@ -206,3 +211,9 @@ vnoremap // y/<C-R>"<CR>
 map <Leader>r :call RangerExplorer()<CR>
 " clear marks a-z and A-Z
 map <leader>m :delmarks a-zA-Z<CR>
+" toggle pencil mode
+map <leader>p :TogglePencil<CR>
+" turn on hard pencil mode
+map <leader>hp :HardPencil<CR>
+" turn on soft pencil mode
+map <leader>sp :SoftPencil<CR>
