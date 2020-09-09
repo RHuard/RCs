@@ -66,7 +66,6 @@ bindkey -v
 # zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions
 # alias-tips: https://github.com/djui/alias-tips
 plugins=(git history-substring-search zsh-autosuggestions alias-tips)
-# source $HOME/.oh-my-zsh/plugins/calc/calc.plugin.zsh
 
 # User configuration
 
@@ -109,6 +108,13 @@ alias running='ps -ax | grep -v "grep" | grep -i '
 alias reademail='mbsync emc && mutt'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# setup calculator alais
+autoload -U zcalc
+function __call_zcalc {
+    zcalc -e "$*"
+}
+aliases[calc]='__call_zcalc'
 
 # enable syntax highlighting
 source ~/.oh-my-zsh/plugins/syntax/zsh-syntax-highlighting.zsh
