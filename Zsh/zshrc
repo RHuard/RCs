@@ -66,7 +66,7 @@ bindkey -v
 # zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions
 # alias-tips: https://github.com/djui/alias-tips
 plugins=(git history-substring-search zsh-autosuggestions alias-tips)
-source $HOME/.oh-my-zsh/plugins/calc/calc.plugin.zsh
+# source $HOME/.oh-my-zsh/plugins/calc/calc.plugin.zsh
 
 # User configuration
 
