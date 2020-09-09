@@ -7,7 +7,10 @@ to install git clone https://github.com/rhuard/RCs.git $HOME/RCs
 Not a dependency for using these configs: but my newstartup repo (https://github.com/rhuard/NewStartup) Takes care most of the external dependencies this repo does not take care of
 
 ### zsh:
-* the zsh syntax highlight plugin (https://github.com/zsh-users/zsh-syntax-highlighting.git) - this is handled for you
+* zsh syntax highlight plugin (https://github.com/zsh-users/zsh-syntax-highlighting.git) - this is handled for you
+* zsh autosuggestions plugin (https://github.com/zsh-users/zsh-autosuggestions)
+* zsh alias tips plugin (https://github.com/djui/alias-tips)
+* zsh calc plugin (https://github.com/arzzen/calc.plugin.zsh) - note you have to remove the = alias as it conflicts with syntax highlighting
 * source-highlighting package so less will open with colors - not handled for you. This is handled in my newstartup repo
 
 ### bash:

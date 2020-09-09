@@ -23,10 +23,10 @@ Plug 'yegappan/taglist' "https://vimawesome.com/plugin/taglist-vim
 
 call plug#end()
 
-
 filetype on
 filetype plugin indent on
 
+set encoding=utf-8
 set history=50 "50 lines of command line history
 set ruler      "show the cursor pistion all times
 set showcmd    "display incomplete commands
@@ -48,6 +48,7 @@ set listchars=tab:🢒\ ,extends:🢖,precedes:🢔
 set list
 "set hidden to hide new unsave buffers
 set hidden
+set lazyredraw "don't redraw screen in middle of macro execution
 
 "netrw settings [netrw-browse-maps] for help
 let g:netrw_banner=0
