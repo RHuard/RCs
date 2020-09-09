@@ -10,7 +10,6 @@ Not a dependency for using these configs: but my newstartup repo (https://github
 * zsh syntax highlight plugin (https://github.com/zsh-users/zsh-syntax-highlighting.git) - this is handled for you
 * zsh autosuggestions plugin (https://github.com/zsh-users/zsh-autosuggestions)
 * zsh alias tips plugin (https://github.com/djui/alias-tips)
-* zsh calc plugin (https://github.com/arzzen/calc.plugin.zsh) - note you have to remove the = alias as it conflicts with syntax highlighting
 * source-highlighting package so less will open with colors - not handled for you. This is handled in my newstartup repo
 
 ### bash:
@@ -20,7 +19,7 @@ Not a dependency for using these configs: but my newstartup repo (https://github
 * none
 
 ### vim:
-* uses Vundle (https://github.com/VundleVim/Vundle.vim) to manage plugins, it uses the plugins:
+* uses vim-plug (https://github.com/junegunn/vim-plug) to manage plugins, it uses the plugins:
   * YouCompleteMe: https://github.com/Valloric/YouCompleteMe
   * vim-multiple-cursors: https://github.com/terryma/vim-multiple-cursors
   * rainbow: https://github.com/luochen1990/rainbow
