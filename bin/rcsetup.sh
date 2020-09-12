@@ -29,6 +29,7 @@ mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.config/nvim/colors
 mkdir -p $HOME/.vim/colors
 mkdir -p $HOME/.vim/syntax
+mkdir -p $HOME/.ipython/profile_default
 
 # link new rcs
 ln -s $HOME/RCs/Bash/bashrc $HOME/.bashrc
