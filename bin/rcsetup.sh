@@ -17,7 +17,7 @@ rm -f $HOME/.oh-my-zsh/themes/ryfletcherm.zsh-theme
 rm -f $HOME/.tmux.conf
 rm -f $HOME/.xinitrc
 rm -f $HOME/.xmodmap
-rm -f $HOME/.gitignore_global
+rm -f $HOME/gitignore_global
 rm -f $HOME/.inputrc
 rm -f $HOME/.ipython/profile_default/ipython_config.py
 
@@ -29,6 +29,7 @@ mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.config/nvim/colors
 mkdir -p $HOME/.vim/colors
 mkdir -p $HOME/.vim/syntax
+mkdir -p $HOME/.ipython/profile_default
 
 # link new rcs
 ln -s $HOME/RCs/Bash/bashrc $HOME/.bashrc
