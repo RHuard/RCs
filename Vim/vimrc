@@ -164,8 +164,8 @@ map <F4> :edit .<CR>
 " F5 prints absolute path of file
 map <F5> :echo expand('%:p')<CR>
 " F6 Toggles auto parens
-map <F6> :call PasteModeToggle()<CR>
-" F7 Toggles line numer (regular to relative)
+map <F6> :call AutoParensToggle()<CR>
+" F7 Flake 8
 map <F7> :call Flake8()<CR>
 " F8 opens a new tab
 map <F8> :tabnew<CR>
@@ -179,6 +179,7 @@ map <F12> :! ctags -R -f tags .<CR>
 map <leader>R :call RelNumToggle()<CR>
 " Turn off numbers
 map <leader>N :set nonumber<CR>:set norelativenumber<CR>:let g:num=0<CR>
+
 " quick fix window mappings
 map [q :cprev<CR>
 map ]q :cnext<CR>
@@ -197,11 +198,17 @@ map <leader>o o<Esc>
 map <leader>O O<Esc>
 " insert template calls
 map <leader>P :call InsertPython()<CR>
+
 " buffers
+" next buffer
 map <leader>l :bn<CR>
+" previous buffer
 map <leader>h :bp<CR>
+" new buffer
 map <leader>E :enew<CR>
+" delete (unload) current buffer
 map <leader>d :bd<CR>
+
 " reset syntax when it occasionally gets messed up
 map <leader>S :syntax sync fromstart<CR>
 " execute :shell
