@@ -20,6 +20,7 @@ rm -f $HOME/.xmodmap
 rm -f $HOME/gitignore_global
 rm -f $HOME/.inputrc
 rm -f $HOME/.ipython/profile_default/ipython_config.py
+rm -f $HOME/.xbindkeysrc
 
 # create dirs if don't exist
 mkdir -p $HOME/.config
@@ -49,6 +50,7 @@ ln -s $HOME/RCs/config/i3/config $HOME/.config/i3/config
 ln -s $HOME/RCs/Vim/ryslate.vim $HOME/.vim/colors/ryslate.vim
 ln -s $HOME/RCs/Vim/ryslate.vim $HOME/.config/nvim/colors/ryslate.vim
 ln -s $HOME/RCs/Vim/syntax/c.vim $HOME/.vim/syntax/c.vim
+ln -s $HOME/RCs/XBindKeys/xbindkeysrc $HOME/.xbindkeysrc
 
 #install vim/nvim plugins
 vim +PlugInstall +qall
