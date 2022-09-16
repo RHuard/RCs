@@ -1,0 +1,14 @@
+# source login info from private muttrc
+# needs to be defined
+source $HOME/.config/mutt/muttrc_private
+
+set folder = "imaps://imap.gmail.com"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+
+set timeout = 30
+
+auto_view text/html
+alternative_order text/plain text/html
